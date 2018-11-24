@@ -1,0 +1,35 @@
+---
+---
+STARTUP AUTOBAHN powered by Plug and Play
+EXPO Day 2019
+February 21st, 2019
+
+www.startup-autobahn.com/de/
+_____________________________________________________
+
+Last build process on {{ site.time }}
+via {{ site.url }}
+_____________________________________________________
+
+AUTHOR
+Bastian Kroggel (bastian@pnptc.com)
+@derKroggel
+www.bastiankroggel.com
+_____________________________________________________
+
+Based upon the following projects:
+
+- HEAD by Josh Buchea
+  A list of everything that *could* go in the <head> of your document.
+  https://github.com/joshbuchea/HEAD
+
+- jQuery.countdown by Edson Hilios
+  The Final Countdown plugin for jQuery
+  https://github.com/hilios/jQuery.countdown
+_____________________________________________________
+
+CHANGELOG
+
+20181124 2358
+INITIAL UPLOAD
+initial setup of main placeholder website including countdown element

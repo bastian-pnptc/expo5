@@ -19,7 +19,7 @@
         <a href="https://twitter.com/{{ site.data.information.twitter }}"><span class="fab fa-twitter"></span></a>
       </div>
     </div>
-    {{ page.sub_header | markdownify }}
+    {{ page.sub_header | markdownify | replace: '<p>', '<p class="sub_element">' }}
   </div>
 
   <div id="expo_countdown" class="b sans-serif white">

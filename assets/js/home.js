@@ -1,5 +1,6 @@
 ---
 ---
+console.log('STARTUP AUTOBAHN powered by Plug and Play\nEXPO Day 5 on February 21st, 2019\n\nFor more information please reach out to or connect with us on Twitter (@startupautobahn).')
 
 {% include js/countdown.min.js %}
 {% include js/jquery.slabtext.min.js %}

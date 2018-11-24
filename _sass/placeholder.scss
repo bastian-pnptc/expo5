@@ -72,6 +72,12 @@ body.placeholder {
     p {
       line-height: 1.2em;
     }
+    .sub_element {
+      @include link-mix(white);
+      a {
+        text-decoration: none;
+      }
+    }
   }
   .right {
     p {
