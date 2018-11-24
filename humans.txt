@@ -5,17 +5,16 @@ EXPO Day 2019
 February 21st, 2019
 
 www.startup-autobahn.com/de/
-_____________________________________________________
+_______________________________________
 
 Last build process on {{ site.time }}
 via {{ site.url }}
-_____________________________________________________
-
+_______________________________________
 AUTHOR
 Bastian Kroggel (bastian@pnptc.com)
 @derKroggel
 www.bastiankroggel.com
-_____________________________________________________
+_______________________________________
 
 Based upon the following projects:
 
@@ -26,7 +25,7 @@ Based upon the following projects:
 - jQuery.countdown by Edson Hilios
   The Final Countdown plugin for jQuery
   https://github.com/hilios/jQuery.countdown
-_____________________________________________________
+_______________________________________
 
 CHANGELOG
 
