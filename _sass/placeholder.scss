@@ -1,0 +1,97 @@
+body.placeholder {
+  background: $dark;
+}
+
+.placeholder__inner {
+  overflow: hidden;
+  min-height: 100vh;
+  @include display_flex;
+  @include align-items(flex-end);
+  @include direction_column;
+  @include justify-content(space-between);
+  width: 100%;
+  padding: 50px 1em 1em;
+  position: relative;
+  @include media-query($small){
+    padding: 50px;
+  };
+}
+
+.placeholder {
+  .logo {
+    @include display_flex;
+    margin-bottom: 50px;
+    svg {
+      width: 100%;
+      fill: white;
+    }
+    .sa_logo {
+      width: 150px;
+    }
+    .dotevents_logo {
+      margin-left: 10px;
+      width: 80px;
+    }
+  }
+  .claim {
+    max-width: 90%;
+    @include media-query($small){
+      max-width: 70%;
+    };
+    p {
+      font-size: calc(1em + 2.5vw);
+      line-height: 1em;
+    }
+  }
+  .sub {
+    max-width: 400px;
+    margin-top: 100px;
+    text-align: right;
+    p {
+      line-height: 1.2em;
+    }
+  }
+  .right {
+    p {
+      text-align: right;
+    }
+  }
+}
+
+#expo_countdown {
+  opacity: .1;
+  right: 1em;
+  z-index: -1;
+  @include media-query($small){
+    opacity: .02;
+    right: 50px;
+  };
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+  //transform: translate(0%, 100%) rotate(270deg);
+  //transform-origin: top left;
+  //transform: translate(-100%, 0%) rotate(90deg);
+  //transform-origin: bottom right;
+  p {
+    //font-size: calc(100vh / 5);
+    font-size: calc(100vw / 5);
+    line-height: 1em;
+    //transform: translate(-2%, -15%);
+    //transform: translate(2%, 10%);
+    transform: translate(1%, 10%);
+    font-family: 'Roboto Mono', monospace;
+  }
+}
+
+.btn {
+  @include link-mix($red);
+  a {
+    text-decoration: none;
+    border: 1px solid $red;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 15px 15px;
+    margin-bottom: 15px;
+  }
+}

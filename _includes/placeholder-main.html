@@ -1,0 +1,23 @@
+<div class="placeholder__inner">
+  <div class="right logo">
+    <div class="sa_logo">
+      {% include svg/sa_pri_white_rgb.svg %}
+    </div>
+    <div class="dotevents_logo">
+      {% include svg/dotevents.svg %}
+    </div>
+  </div>
+  <div class="white sans-serif b ttu claim right">
+    {{ page.claim | markdownify }}
+  </div>
+  <div class="white sans-serif sub right small">
+    <div class="btn ttu">
+      <a href="mailto:hannah@pnptc.com">Reach out to us for more information</a>
+    </div>
+    {{ page.sub_header | markdownify }}
+  </div>
+
+  <div id="expo_countdown" class="b sans-serif white">
+    <p></p>
+  </div>
+</div>

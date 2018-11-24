@@ -1,0 +1,18 @@
+---
+layout: compress
+---
+
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+
+  <body{% if page.layout == 'placeholder' %} class="placeholder"{% endif %}>
+
+    {{ content }}
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="{{ "assets/js/home.js" | prepend: site.baseurl }}"></script>
+  </body>
+
+</html>
