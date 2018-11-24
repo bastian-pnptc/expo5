@@ -31,7 +31,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      author: "OOOStaff"
+      author: ""
       permalink: /blog/:year/:title/
 
 compress_html:

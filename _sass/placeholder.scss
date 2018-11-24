@@ -84,6 +84,14 @@ body.placeholder {
   }
 }
 
+.btn_frame {
+  @include display_flex;
+  @include justify-content(flex-end);
+  a {
+    text-decoration: none;
+  }
+}
+
 .btn {
   @include link-mix($red);
   a {
@@ -93,5 +101,22 @@ body.placeholder {
     display: inline-block;
     padding: 15px 15px;
     margin-bottom: 15px;
+  }
+}
+
+.btn_twitter {
+  margin-bottom: 15px;
+  display: block;
+  width: 50px;
+  margin-left: 5px;
+  background: $red;
+  border-radius: 5px;
+  @include link-mix($dark);
+  a {
+    height: 100%;
+    width: 100%;
+    @include display_flex;
+    @include align-items(center);
+    @include justify-content(center);
   }
 }
