@@ -13,3 +13,10 @@ function set_height(){
   $('.placeholder__inner').css('min-height', height);
 }
 set_height();
+
+$('.placeholder__inner').click( function( e ){
+  if (e.target !== this) {
+    return;
+  }
+  $(this).toggleClass('active');
+})
