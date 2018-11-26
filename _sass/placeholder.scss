@@ -59,9 +59,15 @@ body.placeholder {
     @include media-query($small){
       max-width: 70%;
     };
+    @include media-query($large){
+      max-width: 60%;
+    };
     p {
       font-size: calc(1em + 2.5vw);
       line-height: 1em;
+      span {
+        white-space: pre;
+      }
     }
   }
   .sub {
