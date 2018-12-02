@@ -1,0 +1,18 @@
+footer:
+  - link: STARTUP AUTOBAHN
+    url: https://startupautobahn.com
+  - link: Plug and Play
+    url: https://plugandplaytechcenter.com/
+  - link: Imprint
+    url: /imprint
+  - link: Privacy Policy
+    url: /privacy-policy
+
+
+footer_social:
+  - fa_title: fab fa-twitter
+    url: https://twitter.com/@startupautobahn
+  - fa_title: fab fa-instagram
+    url: https://instagram.com/@startupautobahn
+  - fa_title: fab fa-linkedin-in
+    url: https://linkedin.com/startupautobahn

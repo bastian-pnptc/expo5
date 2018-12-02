@@ -3,6 +3,7 @@ body.placeholder {
 }
 
 .placeholder__inner {
+  background: $dark;
   overflow: hidden;
   min-height: 100vh;
   @include display_flex;
@@ -38,7 +39,7 @@ body.placeholder {
   }
 }
 
-.placeholder {
+.placeholder__inner {
   .logo {
     @include display_flex;
     margin-bottom: 50px;

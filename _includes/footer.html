@@ -1,0 +1,28 @@
+<footer>
+  <div class="footer__inner">
+
+    <div class="footer__left">
+    </div>
+
+    <div class="footer__right">
+      <div class="">
+        <ul class="white sans-serif">
+          <li class="sm_title">Social Media Channels |</li>
+          {% for el in site.data.navigation.footer_social %}
+          <li><a href="{{ el.url }}"><i class="
+          {{ el.fa_title }}"></i></a></li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="">
+        <ul class="white sans-serif">
+          {% for el in site.data.navigation.footer %}
+            <li><a href="{{ el.url }}">{{ el.link }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</footer>

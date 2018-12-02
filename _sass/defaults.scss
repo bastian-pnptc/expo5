@@ -10,7 +10,7 @@ $main: 'Noway', system, sans-serif;
 
 // device width (use bootstrap)
 //$xtra-large: none !default;
-$xtra-large: 1350px !default;
+$xtra-large: 2300px !default;
 $large: 1199px !default;
 $medium: 991px !default;
 $small: 767px !default;
@@ -137,6 +137,9 @@ p {
 
 .dark {
   color: $dark;
+  * {
+    color: $dark;
+  }
 }
 
 .no_margin {
@@ -165,8 +168,21 @@ p {
   font-size: 120%;
 }
 
+
+// headers
+h3 {
+  font-size: 3rem;
+  line-height: .8em;
+}
+
+h4 {
+  margin: 0;
+  font-size: 20px;
+}
 // import other files
 @import
   "typography_base",
-  "placeholder"
+  "placeholder",
+  "speaker",
+  "footer"
 ;

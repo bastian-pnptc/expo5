@@ -1,0 +1,109 @@
+.speaker {
+  margin: 100px 2em;
+  .speaker__inner {
+    @include display_flex;
+    // flex-wrap: wrap;
+  }
+  .speaker__section {
+    padding-top: 10px;
+    margin-right: 50px;
+    flex: 1 0 200px;
+  }
+  .speaker__frame {
+    @include display_flex;
+    flex-wrap: wrap;
+  }
+  .speaker__item {
+    //width: 200px;
+    border-radius: 5px;
+    overflow: hidden;
+    @include display_flex;
+    //width: calc(50% - 20px);
+    height: 200px;
+    margin: 10px;
+    min-width: 300px;
+    max-width: 800px;
+    @include media-query($large){
+      width: calc(100%/2 - 20px);
+    };
+    @include media-query($xtra-large){
+      width: calc(100%/3 - 20px);
+    };
+  }
+  .speaker__image {
+    height: 100%;
+    width: 100%;
+    margin-right: 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex: 1 0 200px;
+  }
+  .speaker__info {
+    position: relative;
+    margin: 20px;
+    overflow: hidden;
+    @include display_flex;
+    @include direction_column;
+    p {
+      font-size: .85rem;
+      line-height: 1.5em;
+      padding: 0;
+      margin: 0;
+      flex: 0 1 auto;
+      & + p {
+        padding-top: .5em;
+      }
+    }
+    p.position,
+    p.company {
+      padding: 0;
+      margin: 0;
+      font-size: .8rem;
+      color: $red;
+      flex: 1 0 auto;
+    }
+    .read_more {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 45px;
+      width: 100%;
+      padding-top: 35px;
+      background: white;
+      @include display_flex;
+      //@include justify-content(center);
+      @include align-items(center);
+      background: linear-gradient(
+        to bottom,
+        hsla(0, 0%, 100%, 0) 0%,
+        hsla(0, 0%, 100%, 0.011) 3%,
+        hsla(0, 0%, 100%, 0.042) 5.3%,
+        hsla(0, 0%, 100%, 0.091) 7.3%,
+        hsla(0, 0%, 100%, 0.154) 9.2%,
+        hsla(0, 0%, 100%, 0.228) 11.3%,
+        hsla(0, 0%, 100%, 0.312) 13.7%,
+        hsla(0, 0%, 100%, 0.401) 16.9%,
+        hsla(0, 0%, 100%, 0.494) 21.1%,
+        hsla(0, 0%, 100%, 0.588) 26.5%,
+        hsla(0, 0%, 100%, 0.679) 33.4%,
+        hsla(0, 0%, 100%, 0.764) 42.1%,
+        hsla(0, 0%, 100%, 0.842) 52.8%,
+        hsla(0, 0%, 100%, 0.909) 65.9%,
+        hsla(0, 0%, 100%, 0.963) 81.5%,
+        hsl(0, 0%, 100%) 100%
+      );
+      p {
+        font-size: .7rem;
+      }
+    }
+  }
+}
+
+.keynotes {
+  margin-top: 50px;
+  .speaker__item {
+    width: 100%;
+    max-width: 900px;
+  }
+}

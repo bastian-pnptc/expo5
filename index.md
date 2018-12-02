@@ -1,5 +1,5 @@
 ---
-layout: placeholder
+layout: home
 event_date: '2019/02/21 14:00:00'
 claim:
   <span class="red">EXPO Day 5</span> will be held on <span class="red">February 21st</span>, 2019 at Wagenhallen, Stuttgart — Germany.
