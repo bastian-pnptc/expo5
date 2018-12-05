@@ -4,7 +4,7 @@ section.introduction {
     margin: 100px 0 250px;
   };
   p {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   .intro_container {
     // @include display_flex;
@@ -18,7 +18,10 @@ section.introduction {
   .intro_first {
     max-width: 600px;
     flex: 1 0 400px;
-    margin: 0 auto 25px;
+    margin: 0 0 25px;
+    @include media-query($small) {
+      margin: 0 auto 25px;
+    };
     p {
       font-size: 200%;
       line-height: 1.2em;

@@ -110,11 +110,14 @@ justify-content: $justify;
 
 p {
   line-height: 1.6;
-  font-size: 16px;
+  font-size: .8rem;
   margin: 0;
   &+p {
     margin-top: 1em;
   }
+  @include media-query($small) {
+    font-size: 16px;
+  };
 }
 
 .br {
