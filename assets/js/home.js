@@ -78,6 +78,11 @@ $flashback.imagesLoaded().progress( function() {
   $flashback.masonry('layout');
 });
 
+$('.flashback').imagesLoaded( function() {
+  init_height_masonry();
+  console.log('done');
+});
+
 // calc height of masonry
 var masonry_height = 0;
 
