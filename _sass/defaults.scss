@@ -168,11 +168,36 @@ p {
   font-size: 120%;
 }
 
+.container {
+  width: 100%;
+  max-width: 1900px;
+  margin: 0 auto;
+  padding: 0 1em;
+  @include media-query($medium) {
+    padding: 0 3em;
+  };
+}
+
 
 // headers
-h3 {
-  font-size: 3rem;
+h2 {
+  font-size: 4rem;
   line-height: .8em;
+  margin-bottom: 0;
+  @include media-query($small){
+    font-size: 6rem;
+  };
+  @include media-query($medium){
+    font-size: 7rem;
+  };
+}
+
+h3 {
+  font-size: 2rem;
+  line-height: .8em;
+  @include media-query($medium){
+    font-size: 3rem;
+  };
 }
 
 h4 {
@@ -184,5 +209,10 @@ h4 {
   "typography_base",
   "placeholder",
   "speaker",
-  "footer"
+  "footer",
+  "mediapartner",
+  "powered_by",
+  "introduction",
+  "flashback",
+  "include/fancybox"
 ;

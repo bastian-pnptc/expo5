@@ -1,0 +1,79 @@
+section.flashback {
+  width: 100%;
+  position: relative;
+  // h2 {
+  //   font-size: 7rem;
+  //   margin-bottom: 10px;
+  // }
+  p.intro {
+    max-width: 500px;
+  }
+  .expand_bar {
+    background: $dark;
+    cursor: pointer;
+    width: 100%;
+    min-height: 70px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    @include display_flex;
+    @include align-items(center);
+    z-index: 2;
+  }
+  transition: all ease-in-out .6s;
+  overflow: hidden;
+  .flashback__grid {
+    margin: 50px auto 0;
+    background: $dark;
+  }
+  &.active {
+    transition: all ease-in-out .6s;
+    .flashback__grid {
+
+    }
+  }
+}
+
+.flashback__item {
+  width: calc(100% / 2);
+  margin-bottom: 0px;
+  padding: 0;
+  transition: all ease-in-out .3s;
+  img {
+    margin: 0;
+    padding: 0;
+    display: block;
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
+    filter: grayscale(1);
+    opacity: .8;
+    transition: all ease-in-out .3s;
+  }
+  &:hover {
+    z-index: 1;
+    transform: scale(1.1);
+    transition: all ease-in-out .3s;
+    img {
+      filter: grayscale(0);
+      opacity: 1;
+      transition: all ease-in-out .3s;
+    }
+  }
+  @include media-query($small){
+    width: calc(100% / 3);
+  };
+  @include media-query($medium){
+    width: calc(100% / 4);
+  };
+  @include media-query($large){
+    width: calc(100% / 6);
+  };
+  @include media-query($xtra-large){
+    width: calc(100% / 8);
+  };
+}
+
+.fancybox-container {
+  font-family: sans-serif;
+}

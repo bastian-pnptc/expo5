@@ -1,0 +1,36 @@
+section.powered_by {
+  margin: 100px 1em;
+  @include display_flex;
+  @include justify-content(center);
+  @include align-items(center);
+  @include direction_row;
+  svg {
+    fill: $dark;
+    width: 100%;
+  }
+  .powered__items {
+    max-width: 650px;
+    height: 100%;
+    margin-top: 10px;
+    @include display_flex;
+    //@include justify-content(center);
+    //@include align-items(center);
+  }
+  .powered__item {
+    overflow: hidden;
+    width: 100%;
+    &:not(:last-of-type){
+      margin-right: 2vw;
+    }
+    &:not(:first-of-type){
+      margin-left: 2vw;
+    }
+  }
+  .pnp_hr_vert {
+    flex: 1 0 auto;
+    width: 1px;
+    background: $dark;
+    opacity: .6;
+    transform: scaleY(1.5);
+  }
+}

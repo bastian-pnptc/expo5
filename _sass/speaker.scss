@@ -1,13 +1,22 @@
 .speaker {
-  margin: 100px 2em;
+  margin: 100px auto;
   .speaker__inner {
     @include display_flex;
     // flex-wrap: wrap;
+    @include direction_column;
+    @include media-query($medium){
+      @include direction_row;
+    };
   }
   .speaker__section {
     padding-top: 10px;
     margin-right: 50px;
-    flex: 1 0 200px;
+    @include media-query($small){
+      flex: 1 0 150px;
+    };
+    @include media-query($medium){
+      flex: 1 0 200px;
+    };
   }
   .speaker__frame {
     @include display_flex;
@@ -20,9 +29,13 @@
     @include display_flex;
     //width: calc(50% - 20px);
     height: 200px;
-    margin: 10px;
+    margin: 10px 0;
     min-width: 300px;
     max-width: 800px;
+    transition: all ease-in-out .6s;
+    @include media-query($small){
+      margin: 10px;
+    };
     @include media-query($large){
       width: calc(100%/2 - 20px);
     };
@@ -37,14 +50,15 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    flex: 1 0 200px;
+    flex: 1 0 100px;
+    @include media-query($medium){
+      flex: 1 0 200px;
+    };
   }
   .speaker__info {
     position: relative;
     margin: 20px;
     overflow: hidden;
-    @include display_flex;
-    @include direction_column;
     p {
       font-size: .85rem;
       line-height: 1.5em;
@@ -70,40 +84,69 @@
       height: 45px;
       width: 100%;
       padding-top: 35px;
-      background: white;
-      @include display_flex;
-      //@include justify-content(center);
+      opacity: 1;
+      cursor: pointer;
+      transition: all ease-in-out .6s;
       @include align-items(center);
-      background: linear-gradient(
-        to bottom,
-        hsla(0, 0%, 100%, 0) 0%,
-        hsla(0, 0%, 100%, 0.011) 3%,
-        hsla(0, 0%, 100%, 0.042) 5.3%,
-        hsla(0, 0%, 100%, 0.091) 7.3%,
-        hsla(0, 0%, 100%, 0.154) 9.2%,
-        hsla(0, 0%, 100%, 0.228) 11.3%,
-        hsla(0, 0%, 100%, 0.312) 13.7%,
-        hsla(0, 0%, 100%, 0.401) 16.9%,
-        hsla(0, 0%, 100%, 0.494) 21.1%,
-        hsla(0, 0%, 100%, 0.588) 26.5%,
-        hsla(0, 0%, 100%, 0.679) 33.4%,
-        hsla(0, 0%, 100%, 0.764) 42.1%,
-        hsla(0, 0%, 100%, 0.842) 52.8%,
-        hsla(0, 0%, 100%, 0.909) 65.9%,
-        hsla(0, 0%, 100%, 0.963) 81.5%,
-        hsl(0, 0%, 100%) 100%
-      );
+      z-index: 1;
+      display: none;
+      &.true {
+        @include display_flex;
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: linear-gradient(
+          to bottom,
+          hsla(0, 0%, 100%, 0) 0%,
+          hsla(0, 0%, 100%, 0.011) 3%,
+          hsla(0, 0%, 100%, 0.042) 5.3%,
+          hsla(0, 0%, 100%, 0.091) 7.3%,
+          hsla(0, 0%, 100%, 0.154) 9.2%,
+          hsla(0, 0%, 100%, 0.228) 11.3%,
+          hsla(0, 0%, 100%, 0.312) 13.7%,
+          hsla(0, 0%, 100%, 0.401) 16.9%,
+          hsla(0, 0%, 100%, 0.494) 21.1%,
+          hsla(0, 0%, 100%, 0.588) 26.5%,
+          hsla(0, 0%, 100%, 0.679) 33.4%,
+          hsla(0, 0%, 100%, 0.764) 42.1%,
+          hsla(0, 0%, 100%, 0.842) 52.8%,
+          hsla(0, 0%, 100%, 0.909) 65.9%,
+          hsla(0, 0%, 100%, 0.963) 81.5%,
+          hsl(0, 0%, 100%) 100%
+        );
+        transition: all ease-in-out .6s;
+      }
       p {
         font-size: .7rem;
       }
+    }
+  }
+  .active .read_more {
+    &:before {
+      opacity: 0;
     }
   }
 }
 
 .keynotes {
   margin-top: 50px;
+  .speaker__frame {
+    width: 100%;
+  }
   .speaker__item {
     width: 100%;
-    max-width: 900px;
+    max-width: unset;
+    .speaker__info {
+      max-width: 1000px;
+    }
+    .speaker__image {
+      max-width: 200px;
+    }
   }
 }

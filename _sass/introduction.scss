@@ -1,0 +1,30 @@
+section.introduction {
+  margin: 100px 0 100px;
+  @include media-query($small) {
+    margin: 100px 0 250px;
+  };
+  p {
+    font-size: 1.2rem;
+  }
+  .intro_container {
+    // @include display_flex;
+    // @include align-items(flex-start);
+    max-width: 1000px;
+    text-align: left;
+    @include media-query($small) {
+      text-align: center;
+    };
+  }
+  .intro_first {
+    max-width: 600px;
+    flex: 1 0 400px;
+    margin: 0 auto 25px;
+    p {
+      font-size: 200%;
+      line-height: 1.2em;
+    }
+  }
+  .intro_second{
+    flex: 0 1 auto;
+  }
+}

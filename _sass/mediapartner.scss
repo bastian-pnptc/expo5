@@ -1,3 +1,65 @@
 section.mediapartner {
-  background-color: $
+  background-color: $dark;
+  width: 100%;
+  margin: 20px 0 50px;
+  @include display_flex;
+  padding: 100px 1em;
+  // h3 {
+  //   font-size: 7rem;
+  //   margin: 0;
+  // }
+  p.intro {
+    max-width: 500px;
+  }
+  .mediaparter_logos {
+    @include display_flex;
+    @include justify-content(space-between);
+    margin-top: 50px;
+    flex-wrap: wrap;
+    .mediapartner_item {
+      svg {
+        fill: $dark;
+        width: 80%;
+      }
+    }
+  }
+}
+
+.pnp_card {
+  background: white;
+  border-radius: 5px;
+  padding: 50px;
+  width: 100%;
+  @include display_flex;
+  @include align-items(center);
+  @include justify-content(center);
+  box-shadow: 0 2px 4px 0 rgba(14,30,37,0.12);
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 10px;
+  figure {
+    @include display_flex;
+    @include align-items(center);
+    @include justify-content(center);
+    @include direction_column;
+    figcaption {
+      text-align: center;
+      margin-top: 10px;
+      position: absolute;
+      bottom: 0;
+      background: $red;
+      color: white;
+      width: 100%;
+      padding: 10px 0;
+    }
+  }
+  @include media-query($small){
+    width: calc(100% / 2 - 5px);
+  };
+  @include media-query($medium){
+    width: calc(100% / 3 - 1em);
+  };
+  @include media-query($large){
+    width: calc(100% / 4 - 15px);
+  };
 }
