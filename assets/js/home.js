@@ -37,7 +37,11 @@ function read_more() {
     var desc_padding = $(section).find('.desc').outerHeight() - $(section).find('.desc').height();
     var sub_el = $(read_more).height() - desc_padding;
     var link = $(section).find('a.link').outerHeight(true) - $(section).find('a.link').height();
-    var content = $(section)[0].scrollHeight - sub_el + link;
+    if (link > 0) {
+      var content = $(section)[0].scrollHeight - sub_el + link;
+    } else {
+      var content = $(section)[0].scrollHeight - sub_el;
+    }
     //var content = $(section)[0].scrollHeight;
     var space = $(section).outerHeight();
     if (content > space && !$(read_more).hasClass('true') ) {
