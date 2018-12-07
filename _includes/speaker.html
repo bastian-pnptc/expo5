@@ -1,4 +1,50 @@
 <section class="speaker sans-serif">
+
+  <div class="speaker__inner keynotes container">
+
+    <div class="speaker__section ttu red">
+      <div class="header">
+        <h3 class="no_margin">our speakers</h3>
+        <p class="sub_title dark b">Keynotes</p>
+      </div>
+    </div>
+
+    <div class="speaker__frame">
+
+      {% for keynote in site.data.keynotes %}
+      <div class="speaker__item">
+        <div class="speaker__image" {% if keynote.image %}style="background-image: url('{{ keynote.image[0].thumbnails.full.url }}')"{% endif %}>
+          {% unless keynote.image %}
+            <div class="keynote_logo_fallback">
+            </div>
+          {% endunless %}
+        </div>
+        <div class="speaker__info">
+          <h4>{{ keynote.surename }} {{ keynote.name }}</h4>
+          {% if keynote.profession %}
+          <p class="position ttu">{{ keynote.profession }}</p>
+          {% endif %}
+          {% if keynote.company %}
+          <p class="company ttu">{{ keynote.company }}</p>
+          {% endif %}
+          <p class="desc">
+            {{ keynote.bio }}
+            <br><br>
+            {{ keynote.topic}}
+            {{ keynote.description}}
+          </p>
+          <div class="read_more ttu">
+            <p><i class="fas fa-caret-right"></i> Read More</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+
+    </div>
+
+  </div>
+
+  
   <div class="speaker__inner container">
 
     <div class="speaker__section ttu red">
@@ -41,51 +87,6 @@
       </div>
       {% endfor %}
 
-
-    </div>
-
-  </div>
-
-
-  <div class="speaker__inner keynotes container">
-
-    <div class="speaker__section ttu red">
-      <div class="header">
-        <h3 class="no_margin">our speakers</h3>
-        <p class="sub_title dark b">Keynotes</p>
-      </div>
-    </div>
-
-    <div class="speaker__frame">
-
-      {% for keynote in site.data.keynotes %}
-      <div class="speaker__item">
-        <div class="speaker__image" {% if keynote.image %}style="background-image: url('{{ keynote.image[0].thumbnails.full.url }}')"{% endif %}>
-          {% unless keynote.image %}
-            <div class="keynote_logo_fallback">
-            </div>
-          {% endunless %}
-        </div>
-        <div class="speaker__info">
-          <h4>{{ keynote.surename }} {{ keynote.name }}</h4>
-          {% if keynote.profession %}
-          <p class="position ttu">{{ keynote.profession }}</p>
-          {% endif %}
-          {% if keynote.company %}
-          <p class="company ttu">{{ keynote.company }}</p>
-          {% endif %}
-          <p class="desc">
-            {{ keynote.bio }}
-            <br><br>
-            {{ keynote.topic}}
-            {{ keynote.description}}
-          </p>
-          <div class="read_more ttu">
-            <p><i class="fas fa-caret-right"></i> Read More</p>
-          </div>
-        </div>
-      </div>
-      {% endfor %}
 
     </div>
 
