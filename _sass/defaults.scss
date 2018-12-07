@@ -123,6 +123,11 @@ p {
   };
 }
 
+a {
+  @include pure-link($red);
+  text-decoration: none;
+}
+
 .br {
   border-radius: .3em;
 }

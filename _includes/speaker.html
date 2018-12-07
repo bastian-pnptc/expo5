@@ -10,74 +10,34 @@
 
     <div class="speaker__frame">
 
+      {% for startup in site.data.startups %}
       <div class="speaker__item">
-        <div class="speaker__image" style="background-image: url(https://source.unsplash.com/500x500/?portrait)">
-
+        <div class="speaker__image" {% if startup.speaker_image %}style="background-image: url({{ startup.speaker_image }})"{% endif %}>
+          {% unless startup.speaker_image %}
+            <div class="startup_logo_fallback" style="background-image:url({{ startup.logo[0].url }})">
+            </div>
+          {% endunless %}
         </div>
         <div class="speaker__info">
-          <h4>Albus Dumbledore</h4>
-          <p class="position ttu">Magician</p>
-          <p class="company ttu">Hogwarts School of Wizzardry</p>
+          <h4>{% if startup.speaker_name %}{{ startup.speaker_name }}{% else %}{{ startup.name }}{% endif %}</h4>
+          {% if startup.speaker_name AND startup.speaker_position %}
+          <p class="position ttu">{{ startup.speaker_position }}</p>
+          {% endif %}
+          {% if startup.speaker_name %}
+          <p class="company ttu">{{ startup.name }}</p>
+          {% endif %}
           <p class="desc">
-            Thestral dirigible plums, Viktor Krum hexed memory charm Animagus Invisibility Cloak three-headed Dog. Half-Blood Prince Invisibility Cloak cauldron cakes, hiya Harry! Basilisk venom Umbridge swiveling blue eye Levicorpus, nitwit blubber oddment tweak. Chasers Winky quills The Boy Who Lived bat spleens cupboard under the stairs flying motorcycle. Sirius Black Holyhead Harpies, you’ve got dirt on your nose. Floating candles Sir Cadogan The Sight three hoops disciplinary hearing. Grindlewald pig’s tail Sorcerer's Stone biting teacup. Side-along dragon-scale suits Filch 20 points, Mr. Potter.
+            {{ startup.blurb }}
+            <a class="link" href="{{ startup.website }}">Check out their Website</a>
           </p>
           <div class="read_more ttu">
             <p><i class="fas fa-caret-right"></i> Read More</p>
           </div>
         </div>
       </div>
+      {% endfor %}
 
-      <div class="speaker__item">
-        <div class="speaker__image" style="background-image: url(https://source.unsplash.com/501x501/?portrait)">
 
-        </div>
-        <div class="speaker__info">
-          <h4>Albus Dumbledore</h4>
-          <p class="position ttu">Magician</p>
-          <p class="company ttu">Hogwarts School of Wizzardry</p>
-          <p class="desc">
-            Thestral dirigible plums, Viktor Krum hexed memory charm Animagus Invisibility Cloak three-headed Dog. Half-Blood Prince Invisibility Cloak cauldron cakes, hiya Harry! Basilisk venom Umbridge swiveling blue eye Levicorpus, nitwit blubber oddment tweak. Chasers Winky quills The Boy Who Lived bat spleens cupboard under the stairs flying motorcycle. Sirius Black Holyhead Harpies, you’ve got dirt on your nose. Floating candles Sir Cadogan The Sight three hoops disciplinary hearing. Grindlewald pig’s tail Sorcerer's Stone biting teacup. Side-along dragon-scale suits Filch 20 points, Mr. Potter.
-          </p>
-          <div class="read_more ttu">
-            <p><i class="fas fa-caret-right"></i> Read More</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="speaker__item">
-        <div class="speaker__image" style="background-image: url(https://source.unsplash.com/502x502/?portrait)">
-
-        </div>
-        <div class="speaker__info">
-          <h4>Albus Dumbledore</h4>
-          <p class="position ttu">Magician</p>
-          <p class="company ttu">Hogwarts School of Wizzardry</p>
-          <p class="desc">
-            Thestral dirigible plums, Viktor Krum hexed memory charm Animagus Invisibility Cloak three-headed Dog. Half-Blood Prince Invisibility Cloak cauldron cakes, hiya Harry! Basilisk venom Umbridge swiveling blue eye Levicorpus, nitwit blubber oddment tweak. Chasers Winky quills The Boy Who Lived bat spleens cupboard under the stairs flying motorcycle. Sirius Black Holyhead Harpies, you’ve got dirt on your nose. Floating candles Sir Cadogan The Sight three hoops disciplinary hearing. Grindlewald pig’s tail Sorcerer's Stone biting teacup. Side-along dragon-scale suits Filch 20 points, Mr. Potter.
-          </p>
-          <div class="read_more ttu">
-            <p><i class="fas fa-caret-right"></i> Read More</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="speaker__item">
-        <div class="speaker__image" style="background-image: url(https://source.unsplash.com/503x503/?portrait)">
-
-        </div>
-        <div class="speaker__info">
-          <h4>Albus Dumbledore</h4>
-          <p class="position ttu">Magician</p>
-          <p class="company ttu">Hogwarts School of Wizzardry</p>
-          <p class="desc">
-            Thestral dirigible plums, Viktor Krum hexed memory charm Animagus Invisibility Cloak three-headed Dog. Half-Blood Prince Invisibility Cloak cauldron cakes, hiya Harry! Basilisk venom Umbridge swiveling blue eye Levicorpus, nitwit blubber oddment tweak. Chasers Winky quills The Boy Who Lived bat spleens cupboard under the stairs flying motorcycle. Sirius Black Holyhead Harpies, you’ve got dirt on your nose. Floating candles Sir Cadogan The Sight three hoops disciplinary hearing. Grindlewald pig’s tail Sorcerer's Stone biting teacup. Side-along dragon-scale suits Filch 20 points, Mr. Potter.
-          </p>
-          <div class="read_more ttu">
-            <p><i class="fas fa-caret-right"></i> Read More</p>
-          </div>
-        </div>
-
-      </div>
     </div>
 
   </div>

@@ -51,10 +51,21 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    flex: 1 0 100px;
+    flex: 0 0 100px;
+    background-color: #f1f1f1;
+    @include display_flex;
+    @include justify-content(center);
+    @include align-items(center);
     @include media-query($medium){
-      flex: 1 0 200px;
+      flex: 0 0 200px;
     };
+    .startup_logo_fallback {
+      width: 60%;
+      height: 40%;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
   }
   .speaker__info {
     position: relative;
@@ -73,6 +84,10 @@
       & + p {
         padding-top: .5em;
       }
+    }
+    a.link {
+      display: inline-block;
+      margin-top: .5em;
     }
     p.position,
     p.company {
