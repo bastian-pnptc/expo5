@@ -3,7 +3,10 @@ footer {
   min-height: 50px;
   @include display_flex;
   @include align-items(flex-end);
-  padding: 25px 35px;
+  padding: 25px 1em;
+  p + p {
+    padding: 0;
+  }
   ul {
     margin: 0;
     padding: 0;

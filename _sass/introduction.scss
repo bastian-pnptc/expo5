@@ -1,33 +1,72 @@
 section.introduction {
-  margin: 100px 0 100px;
+  margin: 50px 0 50px;
   @include media-query($small) {
     margin: 100px 0 250px;
+  };
+  @include media-query($medium) {
+    margin: 250px 0;
   };
   p {
     font-size: 1rem;
   }
   .intro_container {
-    // @include display_flex;
-    // @include align-items(flex-start);
-    max-width: 1000px;
+    margin: 0;
+    max-width: 600px;
+    padding: 0 5em;
     text-align: left;
     @include media-query($small) {
       text-align: center;
+      margin: 0 auto;
+      max-width: 750px;
+    };
+    @include media-query($small) {
+      max-width: unset;
     };
   }
   .intro_first {
-    max-width: 600px;
     flex: 1 0 400px;
     margin: 0 0 25px;
     @include media-query($small) {
       margin: 0 auto 25px;
     };
+    @include media-query($medium) {
+      max-width: 1350px;
+      margin: 0 auto;
+      margin-bottom: 20px;
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        width: 10%;
+        height: 1px;
+        background: $dark;
+      }
+    };
     p {
       font-size: 200%;
-      line-height: 1.2em;
+      line-height: 1em;
+      letter-spacing: -0.05;
+      @include media-query($small){
+        font-size: 300%;
+      };
+      @include media-query($medium){
+        font-size: 400%;
+        letter-spacing: 0.1em;
+      };
+      @include media-query($large){
+        font-size: 500%;
+        letter-spacing: 0.05em;
+      };
     }
   }
   .intro_second{
     flex: 0 1 auto;
+    @include media-query($medium){
+      max-width: 750px;
+      margin: 0 auto;
+    };
   }
 }

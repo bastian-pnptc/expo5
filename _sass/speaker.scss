@@ -1,11 +1,12 @@
 .speaker {
-  margin: 100px auto;
+  margin: 50px auto;
   .speaker__inner {
     @include display_flex;
     // flex-wrap: wrap;
     @include direction_column;
     @include media-query($medium){
       @include direction_row;
+      margin: 100px auto;
     };
   }
   .speaker__section {

@@ -109,11 +109,14 @@ justify-content: $justify;
 }
 
 p {
-  line-height: 1.6;
+  line-height: 1.5;
   font-size: 1rem;
   margin: 0;
+  letter-spacing: -0.02em;
   &+p {
-    margin-top: 1em;
+    //margin-top: .5em;
+    padding-top: .5em;
+    //text-indent: 1em;
   }
   @include media-query($small) {
     font-size: 16px;
@@ -181,12 +184,17 @@ p {
   };
 }
 
+p.intro {
+  max-width: 650px;
+}
+
 
 // headers
 h2 {
   font-size: 4rem;
   line-height: .8em;
-  margin-bottom: 0;
+  margin: .1em 0 0;
+  letter-spacing: -0.05;
   @include media-query($small){
     font-size: 6rem;
   };
@@ -196,6 +204,7 @@ h2 {
 }
 
 h3 {
+  letter-spacing: -0.05;
   font-size: 2rem;
   line-height: .8em;
   @include media-query($medium){
@@ -206,6 +215,7 @@ h3 {
 h4 {
   margin: 0;
   font-size: 20px;
+  letter-spacing: -0.05;
 }
 // import other files
 @import
@@ -217,5 +227,6 @@ h4 {
   "powered_by",
   "introduction",
   "flashback",
-  "include/fancybox"
+  "include/fancybox",
+  "corporates"
 ;

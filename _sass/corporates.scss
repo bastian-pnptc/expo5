@@ -1,0 +1,9 @@
+section.corporates {
+  width: 100%;
+  min-height: 500px;
+  background: $dark;
+  padding: 50px 0;
+  @include media-query($medium) {
+    padding: 200px 0;
+  };
+}

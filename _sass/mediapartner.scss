@@ -1,16 +1,12 @@
 section.mediapartner {
   background-color: $dark;
   width: 100%;
-  margin: 20px 0 50px;
+  margin: 0 0 50px;
   @include display_flex;
-  padding: 100px 1em;
-  // h3 {
-  //   font-size: 7rem;
-  //   margin: 0;
-  // }
-  p.intro {
-    max-width: 500px;
-  }
+  padding: 50px 0;
+  @include media-query($medium){
+    padding: 250px 0;
+  };
   .mediaparter_logos {
     @include display_flex;
     @include justify-content(space-between);

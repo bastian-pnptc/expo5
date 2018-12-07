@@ -19,6 +19,14 @@ section.powered_by {
   .powered__item {
     overflow: hidden;
     width: 100%;
+    height: 60px;
+    @include display_flex;
+    @include justify-content(center);
+    // @include align-items(center);
+    &.pnp_logo {
+      transform: scale(0.7);
+      transform-origin: center left;
+    }
     &:not(:last-of-type){
       margin-right: 2vw;
     }
