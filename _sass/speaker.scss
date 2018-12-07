@@ -13,7 +13,7 @@
     padding-top: 10px;
     margin-right: 50px;
     @include media-query($small){
-      flex: 1 0 150px;
+      //flex: 1 0 150px;
     };
     @include media-query($medium){
       flex: 1 0 200px;
@@ -35,7 +35,7 @@
     max-width: 800px;
     transition: all ease-in-out .6s;
     @include media-query($small){
-      margin: 10px;
+      //margin: 10px;
     };
     @include media-query($large){
       width: calc(100%/2 - 20px);
