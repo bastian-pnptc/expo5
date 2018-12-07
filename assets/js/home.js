@@ -34,10 +34,11 @@ function read_more() {
   $('.speaker__item').each( function() {
     var section = $(this).find('.speaker__info');
     var read_more = $(this).find('.read_more');
-    var desc_padding = $(section).find('.desc').outerHeight() - $(section).find('.desc').height()
+    var desc_padding = $(section).find('.desc').outerHeight() - $(section).find('.desc').height();
     var sub_el = $(read_more).height() - desc_padding;
-    //var content = $(section)[0].scrollHeight - sub_el;
-    var content = $(section)[0].scrollHeight;
+    var link = $(section).find('a.link').outerHeight(true) - $(section).find('a.link').height();
+    var content = $(section)[0].scrollHeight - sub_el + link;
+    //var content = $(section)[0].scrollHeight;
     var space = $(section).outerHeight();
     if (content > space && !$(read_more).hasClass('true') ) {
       $(read_more).addClass('true');
@@ -81,7 +82,6 @@ $flashback.imagesLoaded().progress( function() {
 
 $('.flashback').imagesLoaded( function() {
   init_height_masonry();
-  console.log('done');
 });
 
 // calc height of masonry
