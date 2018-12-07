@@ -36,7 +36,8 @@ function read_more() {
     var read_more = $(this).find('.read_more');
     var desc_padding = $(section).find('.desc').outerHeight() - $(section).find('.desc').height()
     var sub_el = $(read_more).height() - desc_padding;
-    var content = $(section)[0].scrollHeight - sub_el;
+    //var content = $(section)[0].scrollHeight - sub_el;
+    var content = $(section)[0].scrollHeight;
     var space = $(section).outerHeight();
     if (content > space && !$(read_more).hasClass('true') ) {
       $(read_more).addClass('true');

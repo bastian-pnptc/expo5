@@ -22,6 +22,10 @@
   .speaker__frame {
     @include display_flex;
     flex-wrap: wrap;
+    // fix for margin top on speaker__item
+    @include media-query($small){
+      margin-top: -25px;
+    };
   }
   .speaker__item {
     //width: 200px;
@@ -35,7 +39,7 @@
     max-width: 800px;
     transition: all ease-in-out .6s;
     @include media-query($small){
-      //margin: 10px;
+    margin: 25px 0;
     };
     @include media-query($large){
       width: calc(100%/2 - 20px);
@@ -72,6 +76,7 @@
     margin: 20px;
     margin-left: 0;
     overflow: hidden;
+    flex: 0 1 auto;
     @include media-query($small){
       margin: 20px;
     };
