@@ -6,4 +6,45 @@ section.corporates {
   @include media-query($medium) {
     padding: 200px 0;
   };
+  .corporates__logo_frame {
+    @include display_flex;
+    flex-wrap: wrap;
+    margin: 50px 0 0;
+    position: relative;
+    p.title {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: .8em;
+      margin-left: 1em;
+      @include media-query($small){
+        margin-left: 40px;
+      };
+    }
+    &:first-of-type {
+      margin-top: 100px;
+    }
+  }
+  .corporates_card {
+    width: calc(100% / 3);
+    height: 150px;
+    @include display_flex;
+    @include justify-content(center);
+    @include align-items(center);
+    @include media-query($medium){
+      width: 200px;
+    };
+  }
+  figure {
+    margin: 1em;
+    @include media-query($medium){
+      width: 200px;
+      margin: 1em 40px;
+    };
+    img {
+      max-height: 80px;
+      width: 100%;
+      max-width: 150px;
+    }
+  }
 }

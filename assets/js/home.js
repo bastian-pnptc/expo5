@@ -162,3 +162,8 @@ $( window ).resize(function() {
     expand_bar_close(main);
   }
 });
+
+
+$(".powered_header").slabText({
+    "viewportBreakpoint":380
+});
