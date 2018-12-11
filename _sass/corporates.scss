@@ -14,14 +14,14 @@ section.corporates {
     padding-top: 25px;
     @include media-query($medium){
       padding-top: 0;
+      margin-left: -40px;
     };
     p.title {
       position: absolute;
       top: 0;
       left: 0;
       font-size: .8em;
-      margin-left: 1em;
-      @include media-query($small){
+      @include media-query($medium){
         margin-left: 40px;
       };
     }
