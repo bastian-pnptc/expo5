@@ -3,30 +3,16 @@
     <h2 class="red ttu">Media<br>partner</h2>
     <p class="intro white">Nulla bibendum ante vivamus aliquam cras massa nisl neque turpis, tristique feugiat nam cursus sem suspendisse semper arcu consequat tincidunt, eros dui facilisi ad hendrerit a augue rutrum. Aliquet class mollis aenean justo inceptos, eros suscipit nec blandit, tempus volutpat euismod felis.</p>
     <div class="mediaparter_logos">
-      <div class="mediapartner_item pnp_card">
+      {% for mediapartner in site.data.mediapartner.mediapartners %}
+
+      <a class="mediapartner_item pnp_card" href="{{ mediapartner.url }}" target="_blank">
         <figure>
-          {% include svg/gruenderszene.svg %}
-          <figcaption>Gründerszene</figcaption>
+          {% include svg/{{ mediapartner.logo_svg }} %}
+          <figcaption>{{ mediapartner.name}}</figcaption>
         </figure>
-      </div>
-      <div class="mediapartner_item pnp_card">
-        <figure>
-          {% include svg/business-punk.svg %}
-          <figcaption>Business Punk</figcaption>
-        </figure>
-      </div>
-      <div class="mediapartner_item pnp_card">
-        <figure>
-          {% include svg/bloomberg.svg %}
-          <figcaption>Bloomberg</figcaption>
-        </figure>
-      </div>
-      <div class="mediapartner_item pnp_card">
-        <figure>
-          {% include svg/t3n.svg %}
-          <figcaption>T3N</figcaption>
-        </figure>
-      </div>
+      </a>
+
+      {% endfor %}
     </div>
   </div>
 </section>

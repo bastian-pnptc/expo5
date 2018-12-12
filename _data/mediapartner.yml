@@ -1,0 +1,13 @@
+mediapartners:
+  - name: Gründerszene
+    url: https://gruenderszene.de
+    logo_svg: gruenderszene.svg
+  - name: Business Punk
+    url: https://www.business-punk.com/
+    logo_svg: business-punk.svg
+  - name: Bloomberg
+    url: https://www.bloomberg.com/
+    logo_svg: bloomberg.svg
+  - name: T3N
+    url: https://t3n.de/
+    logo_svg: t3n.svg

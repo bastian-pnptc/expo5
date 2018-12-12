@@ -4,6 +4,9 @@ section.mediapartner {
   @include display_flex;
   padding: 50px 0;
   @include media-query($medium){
+    padding: 150px 0;
+  };
+  @include media-query($xtra-large){
     padding: 250px 0;
   };
   .mediaparter_logos {

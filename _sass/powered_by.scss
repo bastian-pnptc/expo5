@@ -19,18 +19,13 @@ section.powered_by {
   }
   .powered_header {
     line-height: 1em;
-
-    margin: 25px 0;
+    margin-bottom: 0;
+    margin-top: -10px;
     @include media-query($medium) {
-      margin-bottom: 100px;
+      margin-bottom: 80px;
     };
     .slabtext {
-      @include media-query($medium) {
-        line-height: .2em;
-      };
-      @include media-query($large){
-        line-height: .5em;
-      };
+      line-height: 1em;
     }
   }
   .powered__item {
