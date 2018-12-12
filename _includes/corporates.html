@@ -5,22 +5,30 @@
       Semper netus consequat nulla quam aliquam leo varius ridiculus porttitor hendrerit, at faucibus pretium malesuada luctus morbi placerat dolor viverra, dignissim et ultrices aliquet senectus sodales ligula eleifend molestie.
     </p>
     <div class="corporates__logo_frame">
-      <p class="title sans-serif b ttu white">Founding Anchor Partner</p>
+
       {% assign founding = site.data.partners | where:"partnership","Founding Anchor" %}
       {% assign anchor = site.data.partners | where:"partnership","Anchor" %}
       {% assign ecosystem = site.data.partners | where:"partnership","Ecosystem" %}
+
+      <div class="corporates_card pnp_card">
+        <p class="title sans-serif b ttu dark">Founding Anchor</br>Partner</p>
+      </div>
       {% for partner in founding %}
         {% include _partner_plate.html %}
       {% endfor %}
-    </div>
-    <div class="corporates__logo_frame">
-      <p class="title sans-serif b ttu white">Anchor Partner</p>
+
+
+      <div class="corporates_card pnp_card">
+        <p class="title sans-serif b ttu dark">Anchor</br>Partner</p>
+      </div>
       {% for partner in anchor %}
         {% include _partner_plate.html %}
       {% endfor %}
-    </div>
-    <div class="corporates__logo_frame">
-      <p class="title sans-serif b ttu white">Ecosystem Partner</p>
+
+
+      <div class="corporates_card pnp_card">
+        <p class="title sans-serif b ttu dark">Ecosystem</br>Partner</p>
+      </div>
       {% for partner in ecosystem %}
         {% include _partner_plate.html %}
       {% endfor %}
