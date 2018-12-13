@@ -1,9 +1,9 @@
 <section class="corporates">
   <div class="container">
     <h2 class="red b sans-serif ttu">Corporate<br>Partners</h2>
-    <p class="intro white sans-serif">
-      Semper netus consequat nulla quam aliquam leo varius ridiculus porttitor hendrerit, at faucibus pretium malesuada luctus morbi placerat dolor viverra, dignissim et ultrices aliquet senectus sodales ligula eleifend molestie.
-    </p>
+    <div class="intro white sans-serif">
+      {{ page.corporates.content | markdownify }}
+    </div>
     <div class="corporates__logo_frame">
 
       {% assign founding = site.data.partners | where:"partnership","Founding Anchor" %}

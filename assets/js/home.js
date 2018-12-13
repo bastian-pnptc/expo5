@@ -95,7 +95,7 @@ function init_height_masonry() {
   var grid = $('.flashback__grid').outerHeight(true);
   var main = $('.flashback')
   var expand_bar = main.find('.expand_bar').outerHeight(true);
-  var header = main.find('h2').outerHeight(true) + main.find('p.intro').outerHeight(true);
+  var header = main.find('h2').outerHeight(true) + main.find('.intro').outerHeight(true);
   if (grid > 1200) {
     masonry_height = header + 1200;
     main.find('.expand_bar').css('display', '');

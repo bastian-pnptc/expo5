@@ -1,7 +1,9 @@
 <section class="flashback">
   <div class="container sans-serif">
     <h2 class="red b ttu">flashback<br>expo days</h2>
-    <p class="intro">Odio luctus elementum congue mollis habitant senectus tempus nam, dui ridiculus consequat montes elit purus. Himenaeos congue leo euismod tincidunt odio quam nam non eget, ultricies fringilla accumsan venenatis velit convallis eros aenean, netus placerat lacinia turpis egestas ante habitasse pretium. Duis quis et ultrices feugiat blandit etiam molestie primis erat, bibendum inceptos efficitur fusce pulvinar quam eleifend class turpis, nec purus phasellus libero cursus natoque praesent auctor.</p>
+    <div class="intro">
+      {{ page.flashback.intro | markdownify }}
+    </div>
   </div>
   <div class="flashback__grid">
     {% for image in site.static_files %}

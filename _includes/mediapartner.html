@@ -1,7 +1,9 @@
 <section class="mediapartner sans-serif">
   <div class="container">
     <h2 class="red ttu">Media<br>partner</h2>
-    <p class="intro white">Nulla bibendum ante vivamus aliquam cras massa nisl neque turpis, tristique feugiat nam cursus sem suspendisse semper arcu consequat tincidunt, eros dui facilisi ad hendrerit a augue rutrum. Aliquet class mollis aenean justo inceptos, eros suscipit nec blandit, tempus volutpat euismod felis.</p>
+    <div class="intro white">
+      {{ page.mediapartner.intro | markdownify }}
+    </div>
     <div class="mediaparter_logos">
       {% for mediapartner in site.data.mediapartner.mediapartners %}
 

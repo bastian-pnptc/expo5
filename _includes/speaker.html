@@ -11,7 +11,7 @@
 
     <div class="speaker__frame">
 
-      {% for keynote in site.data.keynotes %}
+      {% for keynote in site.data.keynotes %}{% if keynote.include %}
       <div class="speaker__item">
         <div class="speaker__image" {% if keynote.image %}style="background-image: url('{{ keynote.image[0].thumbnails.full.url }}')"{% endif %}>
           {% unless keynote.image %}
@@ -38,13 +38,13 @@
           </div>
         </div>
       </div>
-      {% endfor %}
+      {% endif %}{% endfor %}
 
     </div>
 
   </div>
 
-  
+
   <div class="speaker__inner container">
 
     <div class="speaker__section ttu red">

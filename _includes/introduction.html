@@ -1,11 +1,10 @@
 <section class="introduction sans-serif">
   <div class="container intro_container">
     <div class="intro">
-      <p class="b red">We cordially invite you to join our EXPO with about 1000 guest of our corporate partners and other corporations, high-level politicians, successful entrepreneurs, and keynote speakers. This day will be all about Open Innovation and Tech in the field of Mobility, IoT and Enterprise 2.0.</p>
-      <p>This day marks the graduation of 34 Startups of STARTUP AUTOBAHN Program 5. We exclusively showcase the results of 100 days working on 50+ pilot projects with our corporate partners.</p>
-      <p>Stay curious - new partners will be announced!</p>
-      <p>See you at Wagenhallen!</p>
+      {{ page.introduction.content | markdownify }}
     </div>
+    {% if page.introduction.signature %}
     {% include svg/signature_startup_autobahn.html %}
+    {% endif %}
   </div>
 </section>
