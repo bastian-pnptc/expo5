@@ -56,7 +56,7 @@
 
     <div class="speaker__frame">
 
-      {% for startup in site.data.startups %}
+      {% for startup in site.data.startups %}{% if startup.include %}
       <div class="speaker__item">
         <div class="speaker__image" {% if startup.speaker_image %}style="background-image: url({{ startup.speaker_image }})"{% endif %}>
           {% unless startup.speaker_image %}
@@ -85,7 +85,7 @@
           </div>
         </div>
       </div>
-      {% endfor %}
+      {% endif %}{% endfor %}
 
 
     </div>

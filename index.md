@@ -22,17 +22,30 @@ introduction:
       See you at Wagenhallen!
   signature: true
 corporates:
-  content: Semper netus consequat nulla quam aliquam leo varius ridiculus porttitor hendrerit, at faucibus pretium malesuada luctus morbi placerat dolor viverra, dignissim et ultrices aliquet senectus sodales ligula eleifend molestie.
+  content: >
+    STARTUP AUTOBAHN is all about collaboration and open-innovation. Our success is based on the tremendous participation of all partners working in conjunction to reach a single goal — to create a future we'd all would like to be part of.
+
+
+    We are not a single corporation trying to innovate ourself but rather a heterogenous family who took the chance and started to learn from each other and from projects all around the globe.
 flashback:
   intro: >
-    Odio luctus elementum congue mollis habitant senectus tempus nam, dui ridiculus consequat montes elit purus. Himenaeos congue leo euismod tincidunt odio quam nam non eget, ultricies fringilla accumsan venenatis velit convallis eros aenean, netus placerat lacinia turpis egestas ante habitasse pretium.
+    This year is actually the 3rd of our existens. That said we already hold amazing EXPO Days in recent years. Curious how that looked like and kind of — we changed the concept for this years EXPO Day quite a lot so stay tuned — see what to expect:
 
-
-    Duis quis et ultrices feugiat blandit etiam molestie primis erat, bibendum inceptos efficitur fusce pulvinar quam eleifend class turpis, nec purus phasellus libero cursus natoque praesent auctor.
+    Check out our belows impressions.
 apply:
   content: >
-    Nulla bibendum ante vivamus aliquam cras massa nisl neque turpis, tristique feugiat nam cursus sem suspendisse semper arcu consequat tincidunt, eros dui facilisi ad hendrerit a augue rutrum. Aliquet class mollis aenean justo inceptos, eros suscipit nec blandit, tempus volutpat euismod felis.
+    On February 21st, 2019 STARTUP AUTOBAHN EXPO Day will take place. We are more than excited about our all new location and a brand new concept that will allow you to gain even more insights than our previous events did.
+
+
+    EXPO Day will be exclusively for our partners and invite-only guest — but we are always curious to get in touch with the most creative preople, the most innovative minds and the leaders of tomorrow.
+    So here's the offer:
+
+
+    If you think you are the exact right person to complete our audience and if you are curious whats going on at STARTUP AUTOBAHN — click the button below and let us know about yourself. We'll reach out to you soon!
 mediapartner:
   intro: >
-    Nulla bibendum ante vivamus aliquam cras massa nisl neque turpis, tristique feugiat nam cursus sem suspendisse semper arcu consequat tincidunt, eros dui facilisi ad hendrerit a augue rutrum. Aliquet class mollis aenean justo inceptos, eros suscipit nec blandit, tempus volutpat euismod felis.
+    We are proud and honored to announce that this years EXPO Day will be supported by some of the most influencial publications in the startup ecosystem.
+
+
+    Innovations have to be discussed and eveluated, discarded and rediscovered in order to flourish and gain acceptance and recognicion. Our mediapartners are the exact right ones to connect amazing thoughts with the right breading ground to thrive and shape the future.
 ---
