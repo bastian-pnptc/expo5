@@ -37,6 +37,19 @@ body.placeholder {
       opacity: 1;
     }
   }
+  .pnp_snowflake {
+    position: absolute;
+    width: 100px;
+    top: 10px;
+    left: 10px;
+    transform: rotate(-15deg);
+    @include media-query($small){
+      width: 7vw;
+    };
+    svg {
+      fill: white;
+    }
+  }
 }
 
 .placeholder__inner {

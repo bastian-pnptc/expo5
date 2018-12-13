@@ -20,6 +20,7 @@ section.corporates {
     };
     p.title {
       font-size: .8em;
+      line-height: 1em;
     }
     &:first-of-type {
       margin-top: 100px;
@@ -86,6 +87,7 @@ section.corporates {
       transition: transform ease-in-out .6s, opacity ease-in-out .0s .7s;
       opacity: 0;
       font-size: .6em;
+      line-height: 1em;
       padding: 5px;
       text-align: center;
     }
