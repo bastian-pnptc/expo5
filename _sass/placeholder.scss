@@ -89,6 +89,8 @@ body.placeholder {
     margin-top: 100px;
     text-align: right;
     z-index: 1;
+    @include display_flex;
+    @include justify-content(space-between);
     p {
       line-height: 1.2em;
     }

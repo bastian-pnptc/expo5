@@ -1,5 +1,8 @@
 section.apply {
   padding: 100px 0;
+  @include media-query($medium){
+    padding: 150px 0;
+  };
   .apply__form {
     height: 80vh;
     padding: 1em;

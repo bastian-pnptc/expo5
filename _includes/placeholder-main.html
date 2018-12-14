@@ -12,18 +12,21 @@
   </div>
   <div class="white sans-serif b ttu claim right">
     {{ page.claim | markdownify }}
+    {% include scroll_down.html %}
   </div>
-  <div class="white sans-serif sub right small">
-    <div class="btn_frame">
-      <div class="btn ttu">
-        <a href="mailto:hannah@pnptc.com">Reach out to us for more information</a>
+  <div class="white sans-serif sub small right">
+    <div class="">
+      <div class="btn_frame">
+        <div class="btn ttu">
+          <a href="mailto:hannah@pnptc.com">Reach out to us for more information</a>
+        </div>
+        <div class="btn_twitter">
+          <!-- <a href="https://twitter.com/{{ site.data.information.twitter }}"><span class="fab fa-twitter"></span></a> -->
+          <a href="https://www.linkedin.com/{{ site.data.information.linkedin }}"><span class="fab fa-linkedin-in"></span></a>
+        </div>
       </div>
-      <div class="btn_twitter">
-        <!-- <a href="https://twitter.com/{{ site.data.information.twitter }}"><span class="fab fa-twitter"></span></a> -->
-        <a href="https://www.linkedin.com/{{ site.data.information.linkedin }}"><span class="fab fa-linkedin-in"></span></a>
-      </div>
+      {{ page.sub_header | markdownify | replace: '<p>', '<p class="sub_element">' }}
     </div>
-    {{ page.sub_header | markdownify | replace: '<p>', '<p class="sub_element">' }}
   </div>
 
   <div id="expo_countdown" class="b sans-serif white">

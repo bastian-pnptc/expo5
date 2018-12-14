@@ -3,7 +3,7 @@ section.flashback {
   position: relative;
   margin: 50px 0 0;
   @include media-query($medium){
-    margin-top: 250px;
+    margin-top: 150px;
   };
   .expand_bar {
     background: $dark;

@@ -8,6 +8,12 @@
       @include direction_row;
       margin: 100px auto;
     };
+    &:not(.keynote) {
+      margin-top: 50px;
+      @include media-query($medium) {
+        margin-top: 100px;
+      };
+    }
   }
   .speaker__section {
     margin-right: 50px;
