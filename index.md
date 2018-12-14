@@ -5,15 +5,18 @@ claim:
   <span class="red">EXPO Day 5</span> will be held on <span class="red">February 21st</span>, 2019 at Wagenhallen, Stuttgart — Germany.
 
 
-  Prepare yourself and reserve a ticket to be part of our most exciting event yet.
+  Prepare yourself and apply for a ticket to be part of our most exciting event yet.
 sub_header: >
   This site will be continuously updated with information and news of our fifth EXPO Day. Make sure to bookmark this site and visit it regularely. – [STARTUP AUTOBAHN](/humans.txt) © 2018
 introduction:
   content : >
-      <span class="b red">We cordially invite you to join our EXPO with about 1000 guest of our corporate partners and other corporations, high-level politicians, successful entrepreneurs, and keynote speakers. This day will be all about Open Innovation and Tech in the field of Mobility, IoT and Enterprise 2.0.</span>
+      <span class="b red">We cordially invite you to join our EXPO with about 1000 guest of our corporate partners and other corporations, high-level politicians, successful entrepreneurs, and keynote speakers. This day will be all about Open Innovation and Tech in the field of Mobility, Production and Enterprise.</span>
 
 
       This day marks the graduation of 34 Startups of STARTUP AUTOBAHN Program 5. We exclusively showcase the results of 100 days working on 50+ pilot projects with our corporate partners.
+
+
+      Check out belows information in order to reserve your spot at our invite-only event.
 
 
       Stay curious - new partners will be announced!
@@ -23,7 +26,7 @@ introduction:
   signature: true
 corporates:
   content: >
-    STARTUP AUTOBAHN is all about collaboration and open-innovation. Our success is based on the tremendous participation of all partners working in conjunction to reach a single goal — to create a future we'd all would like to be part of.
+    STARTUP AUTOBAHN is all about collaboration and open innovation. Our success is based on the tremendous participation of all partners working in conjunction to reach a single goal — to create a future we'd all would like to be part of.
 
 
     We are not a single corporation trying to innovate ourself but rather a heterogenous family who took the chance and started to learn from each other and from projects all around the globe.

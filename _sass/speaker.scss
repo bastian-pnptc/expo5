@@ -156,6 +156,14 @@
         font-size: .7rem;
       }
     }
+    &.speaker__info_more {
+      @include display_flex;
+      @include align-items(center);
+      p {
+        font-size: 2rem;
+        opacity: .2;
+      }
+    }
   }
   .active .read_more {
     &:before {
@@ -177,6 +185,15 @@
     }
     .speaker__image {
       max-width: 200px;
+    }
+  }
+  .keynote_logo_questionmark {
+    width: 60%;
+    height: 40%;
+    svg {
+      width: 100%;
+      height: 100%;
+      opacity: .2;
     }
   }
 }
