@@ -33,3 +33,11 @@ CHANGELOG
 20181124 2358
 INITIAL UPLOAD
 initial setup of main placeholder website including countdown element
+
+20181207 1832
+STARTUPS CONNECTED WITH AIRTABLE
+using airtable as source for startups
+
+20181212 1802
+REDESIGN CORPORATE SECTION
+include corporates and merge with redesigned partner/corporate section

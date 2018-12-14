@@ -58,14 +58,14 @@
 
       {% for startup in site.data.startups %}{% if startup.include %}
       <div class="speaker__item">
-        <div class="speaker__image" {% if startup.speaker_image %}style="background-image: url({{ startup.speaker_image }})"{% endif %}>
+        <div class="speaker__image" {% if startup.speaker_image %}style="background-image: url({{ startup.speaker_image[0].thumbnails.full.url }})"{% endif %}>
           {% unless startup.speaker_image %}
             <div class="startup_logo_fallback" style="background-image:url({{ startup.logo[0].url }})">
             </div>
           {% endunless %}
         </div>
         <div class="speaker__info">
-          <h4>{% if startup.speaker_name %}{{ startup.speaker_name }}{% else %}{{ startup.name }}{% endif %}</h4>
+          <h4>{% if startup.speaker_name %}{{ startup.speaker_first_name }} {{ startup.speaker_name }}{% else %}{{ startup.name }}{% endif %}</h4>
           {% if startup.speaker_name AND startup.speaker_position %}
           <p class="position ttu">{{ startup.speaker_position }}</p>
           {% endif %}

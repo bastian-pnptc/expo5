@@ -40,11 +40,11 @@ body.placeholder {
   .pnp_snowflake {
     position: absolute;
     width: 100px;
-    top: 10px;
     left: 10px;
     transform: rotate(-15deg);
     @include media-query($small){
       width: 7vw;
+      top: 10px;
     };
     svg {
       fill: white;
