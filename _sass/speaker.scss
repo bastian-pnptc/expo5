@@ -182,8 +182,12 @@
       @include display_flex;
       @include align-items(center);
       p {
-        font-size: 2rem;
+        font-size: 1.4rem;
+        line-height: 0.9;
         opacity: .2;
+        @include media-query($medium) {
+          font-size: 2rem;
+        };
       }
     }
   }
