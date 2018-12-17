@@ -57,9 +57,6 @@
     height: 100%;
     width: 100%;
     margin-right: 10px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     flex: 0 0 100px;
     background-color: #f1f1f1;
     @include display_flex;
@@ -68,12 +65,37 @@
     @include media-query($medium){
       flex: 0 0 200px;
     };
+    .image_bg {
+      height: 100%;
+      width: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      &,
+      &.lazyload,
+      &.lazyloading {
+        opacity: 0;
+      }
+      &.lazyloaded {
+        opacity: 1;
+        transition: opacity .6s;
+      }
+    }
     .startup_logo_fallback {
       width: 60%;
       height: 40%;
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
+      &,
+      &.lazyload,
+      &.lazyloading {
+        opacity: 0;
+      }
+      &.lazyloaded {
+        opacity: 1;
+        transition: opacity .6s;
+      }
     }
   }
   .speaker__info {

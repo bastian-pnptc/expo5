@@ -13,7 +13,10 @@
 
       {% for keynote in site.data.keynotes %}{% if keynote.include %}
       <div class="speaker__item">
-        <div class="speaker__image" {% if keynote.image %}style="background-image: url('{{ keynote.image[0].thumbnails.full.url }}')"{% endif %}>
+        <div class="speaker__image">
+          {% if keynote.image %}
+            <div class="image_bg lazyload" data-bg='{{ keynote.image[0].thumbnails.full.url }}'></div>
+          {% endif %}
           {% unless keynote.image %}
             <div class="keynote_logo_fallback">
             </div>
@@ -69,9 +72,12 @@
 
       {% for startup in site.data.startups %}{% if startup.include %}
       <div class="speaker__item">
-        <div class="speaker__image" {% if startup.speaker_image %}style="background-image: url({{ startup.speaker_image[0].thumbnails.full.url }})"{% endif %}>
+        <div class="speaker__image">
+          {% if startup.speaker_image %}
+            <div class="image_bg lazyload" data-bg='{{startup.speaker_image[0].thumbnails.full.url }}'></div>
+          {% endif %}
           {% unless startup.speaker_image %}
-            <div class="startup_logo_fallback" style="background-image:url({{ startup.logo[0].url }})">
+            <div class="startup_logo_fallback lazyload" data-bg="{{ startup.logo[0].url }}">
             </div>
           {% endunless %}
         </div>

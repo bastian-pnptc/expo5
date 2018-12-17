@@ -76,6 +76,15 @@ section.corporates {
       @include media-query($medium){
         max-width: 150px;
       };
+      &,
+      &.lazyload,
+      &.lazyloading {
+        opacity: 0;
+      }
+      &.lazyloaded {
+        opacity: 1;
+        transition: opacity .6s;
+      }
     }
     figcaption {
       position: absolute;

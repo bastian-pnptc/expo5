@@ -43,6 +43,15 @@ section.flashback {
     filter: grayscale(1);
     opacity: .8;
     transition: all ease-in-out .3s;
+    &,
+    &.lazyload,
+    &.lazyloading {
+      opacity: 0;
+    }
+    &.lazyloaded {
+      opacity: 1;
+      transition: opacity .6s;
+    }
   }
   &:hover {
     z-index: 1;

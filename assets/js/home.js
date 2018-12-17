@@ -6,6 +6,16 @@ console.log('STARTUP AUTOBAHN powered by Plug and Play\nEXPO Day 5 on February 2
 {% include js/jquery.slabtext.min.js %}
 {% include js/masonry.min.js %}
 {% include js/imagesloaded.min.js %}
+{% include js/lazysizes.min.js %}
+
+// LAZYLOAD IMAGES
+document.addEventListener('lazybeforeunveil', function(e){
+    var bg = e.target.getAttribute('data-bg');
+    if(bg){
+        e.target.style.backgroundImage = 'url(' + bg + ')';
+    }
+});
+
 
 $('#expo_countdown p').countdown('2019/02/21 14:00:00', function(event) {
   $(this).html(event.strftime('%T'));
@@ -85,6 +95,11 @@ $flashback.imagesLoaded().progress( function() {
 });
 
 $('.flashback').imagesLoaded( function() {
+  init_height_masonry();
+});
+
+document.addEventListener('lazyloaded', function(e){
+  $flashback.masonry('layout');
   init_height_masonry();
 });
 
