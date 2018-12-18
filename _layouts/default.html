@@ -21,6 +21,19 @@ layout: compress
       $('.four_o_four').css('min-height', window_height);
     </script>
     {% endif %}
+    {% if site.layout == 'home' %}
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+    {% endif %}
   </body>
 
 </html>
