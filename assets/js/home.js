@@ -128,6 +128,7 @@ init_height_masonry();
 function expand_bar_open(obj) {
   var height = obj[0].scrollHeight + obj.find('.expand_bar').outerHeight();
   $(obj).css('height', height).addClass('active');
+  $('.flashback__grid img').addClass('lazypreload');
 }
 
 function expand_bar_close(obj) {
