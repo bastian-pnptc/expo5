@@ -170,7 +170,7 @@ $('.flashback__item a').fancybox({
 
 var resize_width = $(window).width()
 $( window ).resize(function() {
-  if( $(window).width() != width ) {
+  if( $(window).width() != resize_width ) {
     reset_speaker_items();
     read_more();
     init_height_masonry();
