@@ -21,3 +21,23 @@ collections:
             fields:
               - { label: Content, name: content, widget: markdown }
               - { label: Signature, name: signature, widget: boolean }
+          - label: "Corporates"
+            name: "corporates"
+            widget: "object"
+            fields:
+              - { label: "Content", name: "content", widget: "markdown" }
+          - label: "Flashback"
+            name: "flashback"
+            widget: "object"
+            fields:
+              - { label: "Intro", name: "intro", widget: "markdown" }
+          - label: "Apply"
+            name: "apply"
+            widget: "object"
+            fields:
+              - { label: "Content", name: "content", widget: "markdown" }
+          - label: "Mediaparter"
+            name: "mediapartner"
+            widget: "object"
+            fields:
+              - { label: "Intro", name: "intro", widget: "markdown" }
