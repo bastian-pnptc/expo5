@@ -82,12 +82,12 @@
           {% endunless %}
         </div>
         <div class="speaker__info">
-          <h4>{% if startup.speaker_name %}{{ startup.speaker_first_name }} {{ startup.speaker_name }}{% else %}{{ startup.name }}{% endif %}</h4>
+          <h4>{% if startup.speaker_name %}{{ startup.speaker_first_name }} {{ startup.speaker_name }}{% elsif startup.display_name %}{{ startup.display_name }}{% else %}{{ startup.name }}{% endif %}</h4>
           {% if startup.speaker_name AND startup.speaker_position %}
           <p class="position ttu">{{ startup.speaker_position }}</p>
           {% endif %}
           {% if startup.speaker_name %}
-          <p class="company ttu">{{ startup.name }}</p>
+          <p class="company ttu">{% if startup.display_name %}{{ startup.display_name }}{% else %}{{ startup.name }}{% endif %}</p>
           {% endif %}
           <p class="desc">
             {% if startup.description %}
