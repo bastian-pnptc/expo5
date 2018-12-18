@@ -21,7 +21,7 @@ layout: compress
       $('.four_o_four').css('min-height', window_height);
     </script>
     {% endif %}
-    {% if site.layout == 'home' %}
+    {% if page.layout == 'home' %}
     <script>
       if (window.netlifyIdentity) {
         window.netlifyIdentity.on("init", user => {
