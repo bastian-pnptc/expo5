@@ -168,13 +168,17 @@ $('.flashback__item a').fancybox({
    },
 });
 
+var resize_width = $(window).width()
 $( window ).resize(function() {
-  reset_speaker_items();
-  read_more();
-  init_height_masonry();
-  var main = $('.flashback')
-  if ( $(main).hasClass('active') ) {
-    expand_bar_close(main);
+  if( $(window).width() != width ) {
+    reset_speaker_items();
+    read_more();
+    init_height_masonry();
+    var main = $('.flashback')
+    if ( $(main).hasClass('active') ) {
+      expand_bar_close(main);
+    }
+    resize_width = $(window).width()
   }
 });
 
