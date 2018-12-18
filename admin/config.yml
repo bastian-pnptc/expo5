@@ -12,3 +12,12 @@ collections:
         file: "index.md"
         fields:
           - {label: "Layout", name: "layout", widget: "hidden", default: 'home'}
+          - {label: "Event Date", name: "event_date", widget: "date", format: "YYYY/MM/DD HH:mm:ss" }
+          - {label: "Intro Claim", name: "claim", widget: markdown }
+          - {label: "Intro Information", name: "sub_header", widget: markdown }
+          - label: "Introduction"
+            name: "introduction"
+            widget: "object"
+            fields:
+              - { label: Content, name: content, widget: markdown }
+              - { label: Signature, name: signature, widget: boolean }
