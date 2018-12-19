@@ -16,7 +16,6 @@ collections:
         file: "index.md"
         fields:
           - {label: "Layout", name: "layout", widget: "hidden", default: 'home'}
-          - {label: "Event Date", name: "event_date", widget: "datetime", dateFormat: "YYYY/MM/DD", timeFormat: "HH:mm:ss" }
           - {label: "Intro Claim", name: "claim", widget: markdown }
           - {label: "Intro Information", name: "sub_header", widget: markdown }
           - label: "Introduction"
@@ -52,10 +51,59 @@ collections:
     files:
       - label: "Information"
         name: "information"
-        file: "information.yml"
+        file: "_data/information.yml"
         fields:
-          - { label: "Website Title", name: "title", widget: "string", required: true }
-          - { label: "Website Description", name: "description", widget: markdown, required: true }
+          - { label: "Website Title", name: "title", widget: "string", required: true, hint: "The Title of the Website which appears on search engines etc." }
+          - { label: "Website Description", name: "description", widget: markdown, required: true, hint: "The description which appears on google." }
           - { label: "Website Image", name: "image", widget: "image" }
+          - {label: "Event Date", name: "event_date_time", widget: "datetime", dateFormat: "YYYY/MM/DD", timeFormat: "HH:mm:ss" }
           - { lable: "Twitter", name: "twitter", widget: "string" }
-          - { lable: "Linkedin", name: "linkedin", widget: "string" }
+          - { lable: "Linkedin", name: "linkedin", widget: "string", hint: "Only enter the subpage of the website, not the entire domain. E. g. https://linkedin.com/{{ this is the part that should be entered }}" }
+          - { label: "URL", name: "url", widget: "string", hint: "The entire domain of the website." }
+      - label: "Mediapartner"
+        name: "mediapartner"
+        file: "_data/mediapartner.yml"
+        fields:
+          - label: "Mediapartners"
+            name: "mediapartners"
+            widget: "list"
+            fields:
+              - label: "Name of the Parter"
+                name: "name"
+                widget: "string"
+              - label: "URL of the Partner Website"
+                name: "url"
+                widget: "string"
+              - label: "Logo"
+                name: "logo_svg"
+                widget: "string"
+                hint: "To add a logo please ask the admin of this website as they have to be added manually in the backend."
+      - label: "Navigation"
+        name: "navigation"
+        file: "_data/navigation.yml"
+        fields:
+          - label: "Footer Navigation"
+            name: "footer"
+            widget: "list"
+            fields:
+              - label: "Name of Link"
+                name: "link"
+                widget: "string"
+                required: true
+              - label: "URL to Link"
+                name: "url"
+                widget: "string"
+                required: true
+          - label: "Footer Social"
+            name: "footer_social"
+            widget: "list"
+            fields:
+              - label: "Font Awesome Icon"
+                name: "fa_title"
+                widget: "string"
+                required: true
+                hint: "Fontawesome Icon Classes. Can be found at: https://fontawesome.com/icons"
+              - label: "URL to Social Media"
+                name: "url"
+                widget: "string"
+                required: true
