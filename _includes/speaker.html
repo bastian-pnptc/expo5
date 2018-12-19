@@ -31,10 +31,16 @@
           <p class="company ttu">{{ keynote.company }}</p>
           {% endif %}
           <p class="desc">
+            {% if keynote.bio %}
             {{ keynote.bio }}
             <br><br>
-            {{ keynote.topic}}
+            {% endif %}
+            {% if keynote.topic %}
+            <span class="red b ttu">{{ keynote.topic}}</span><br>
+            {% endif %}
+            {% if keynote.description %}
             {{ keynote.description}}
+            {% endif %}
           </p>
           <div class="read_more ttu">
             <p><i class="fas fa-caret-right"></i> Read More</p>
