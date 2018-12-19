@@ -17,7 +17,7 @@ document.addEventListener('lazybeforeunveil', function(e){
 });
 
 
-$('#expo_countdown p').countdown('2019/02/21 14:00:00', function(event) {
+$('#expo_countdown p').countdown('{{ site.data.information.event_date_time }}', function(event) {
   $(this).html(event.strftime('%T'));
 });
 

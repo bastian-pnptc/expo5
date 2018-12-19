@@ -2,10 +2,14 @@ backend:
   name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
 media_folder: "assets/img"
+display_url: https://expo5.pnptc.events
+logo_url: https://expo5.pnptc.events/assets/img/pnp_pri_grn_rgb.svg
 
 collections:
   - name: "pages"
     label: "Pages"
+    editor:
+     preview: false
     files:
       - label: "Index"
         name: "index"
@@ -41,3 +45,17 @@ collections:
             widget: "object"
             fields:
               - { label: "Intro", name: "intro", widget: "markdown" }
+  - name: "data"
+    label: "Data"
+    editor:
+     preview: false
+    files:
+      - label: "Information"
+        name: "information"
+        file: "information.yml"
+        fields:
+          - { label: "Website Title", name: "title", widget: "string", required: true }
+          - { label: "Website Description", name: "description", widget: markdown, required: true }
+          - { label: "Website Image", name: "image", widget: "image" }
+          - { lable: "Twitter", name: "twitter", widget: "string" }
+          - { lable: "Linkedin", name: "linkedin", widget: "string" }
