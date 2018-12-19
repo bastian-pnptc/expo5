@@ -54,6 +54,15 @@ collections:
         file: "_data/information.yml"
         fields:
           - { label: "Website Title", name: "title", widget: "string", required: true, hint: "The Title of the Website which appears on search engines etc." }
+          - { label: "Website Author", name: "author", widget: string }
+          - label: "Main language of website"
+            name: "language"
+            widget: "select"
+            options:
+              - label: English
+                value: en_US
+              - label: German
+                name: de_DE
           - { label: "Website Description", name: "description", widget: markdown, required: true, hint: "The description which appears on google." }
           - { label: "Website Image", name: "image", widget: "image" }
           - {label: "Event Date", name: "event_date_time", widget: "datetime", dateFormat: "YYYY/MM/DD", timeFormat: "HH:mm:ss" }
