@@ -34,6 +34,10 @@ flashback:
     This year is actually the 3rd of our existens. That said we already hold amazing EXPO Days in recent years. Curious how that looked like and kind of — we changed the concept for this years EXPO Day quite a lot so stay tuned — see what to expect:
 
     Check out our belows impressions.
+  video:
+    url: 'https://www.youtube.com/watch?v=UOrf-u23WD8'
+    id: 'UOrf-u23WD8'
+    claim: Check out the recap video<br>EXPO 4 | 2018
 apply:
   content: >
     On February 21st, 2019 STARTUP AUTOBAHN EXPO Day will take place. We are more than excited about our all new location and a brand new concept that will allow you to gain even more insights than our previous events did.

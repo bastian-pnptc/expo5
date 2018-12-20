@@ -87,6 +87,7 @@ function reset_speaker_items() {
 // flashback masonry
 var $flashback = $('.flashback__grid').masonry({
   itemSelector: '.flashback__item',
+  columnWidth: '.grid-sizer',
   percentPosition: true
 });
 
