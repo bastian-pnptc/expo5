@@ -34,6 +34,13 @@ collections:
             widget: "object"
             fields:
               - { label: "Intro", name: "intro", widget: "markdown" }
+              - label: "Video"
+                name: "video"
+                widget: "object"
+                fields:
+                - { label: "URL", name: "url", widget: "string" }
+                - { label: "Youtube ID", name: "id", widget: "string" }
+                - { label: "Claim", name: "claim", widget: "string" }
           - label: "Apply"
             name: "apply"
             widget: "object"
