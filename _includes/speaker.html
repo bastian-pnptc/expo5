@@ -30,18 +30,18 @@
           {% if keynote.company %}
           <p class="company ttu">{{ keynote.company }}</p>
           {% endif %}
-          <p class="desc">
+          <div class="desc">
             {% if keynote.bio %}
-            {{ keynote.bio }}
-            <br><br>
+            {{ keynote.bio | markdownify }}
             {% endif %}
             {% if keynote.topic %}
+            {% if keynote.bio && keynote.description %}<br><br>{% endif %}
             <span class="red b ttu">{{ keynote.topic}}</span><br>
             {% endif %}
             {% if keynote.description %}
-            {{ keynote.description}}
+            {{ keynote.description | markdownify }}
             {% endif %}
-          </p>
+          </div>
           <div class="read_more ttu">
             <p><i class="fas fa-caret-right"></i> Read More</p>
           </div>
