@@ -26,9 +26,9 @@ section.introduction {
   }
   .intro{
     flex: 0 1 auto;
+    margin: 0 auto;
     @include media-query($medium){
       max-width: 750px;
-      margin: 0 auto;
     };
     p {
       font-size: 1rem;
