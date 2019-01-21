@@ -6,7 +6,7 @@ claim:
 
   Prepare yourself and apply for a ticket to be part of our most exciting event yet.
 sub_header: >
-  This site will be continuously updated with information and news of our fifth EXPO Day. Make sure to bookmark this site and visit it regularely. – [STARTUP AUTOBAHN](/humans.txt) © 2018
+  This site will be continuously updated with information and news of our fifth EXPO Day. Make sure to bookmark this site and visit it regularely. – [STARTUP AUTOBAHN](/humans.txt) © 2018 – 2019
 introduction:
   content : >
       <span class="b red">We cordially invite you to join our EXPO with about 1000 guest of our corporate partners and other corporations, high-level politicians, successful entrepreneurs, and keynote speakers. This day will be all about Open Innovation and Tech in the field of Mobility, Production and Enterprise.</span>
