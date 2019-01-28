@@ -1,0 +1,28 @@
+section.schedule {
+  background: $dark;
+  padding: 100px 0;
+  position: relative;
+}
+
+.schedule_el {
+  width: 600px;
+  background: white;
+  position: absolute;
+  z-index: 1;
+  padding: 10px;
+  top: 0;
+}
+
+.schedule_hour {
+  width: 100%;
+  border-top: 2px solid rgba(255, 255, 255, .5);
+  min-height: 100px;
+  box-sizing: border-box;
+  .schedule_hour_time {
+    background: $dark;
+    transform: translateY(-50%);
+    display: inline-block;left: 5%;
+    position: relative;
+    padding: 5px;
+  }
+}

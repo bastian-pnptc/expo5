@@ -7,6 +7,7 @@ console.log('STARTUP AUTOBAHN powered by Plug and Play\nEXPO Day 5 on February 2
 {% include js/masonry.min.js %}
 {% include js/imagesloaded.min.js %}
 {% include js/lazysizes.min.js %}
+{% include js/agenda.js %}
 
 // LAZYLOAD IMAGES
 document.addEventListener('lazybeforeunveil', function(e){
