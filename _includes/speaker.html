@@ -80,6 +80,10 @@
       <div class="speaker__item">
         <div class="speaker__image">
           {% if startup.speaker_image %}
+            <div class="startup_logo_frame">
+              <div class="startup_logo_icon lazyload" data-bg="{{ startup.logo[0].url }}">
+              </div>
+            </div>
             <div class="image_bg lazyload" data-bg='{{startup.speaker_image[0].thumbnails.full.url }}'></div>
           {% endif %}
           {% unless startup.speaker_image %}
