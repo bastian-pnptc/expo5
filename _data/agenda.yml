@@ -1,21 +1,40 @@
 agenda:
   - title: Der erste Agendapunkt
-    start: '09:00'
-    end: '13:00'
+    start: '08:25'
+    end: '11:00'
+    stage: "main"
     info: >
       Faucibus nascetur consectetur fusce dolor hac efficitur ornare, tellus pharetra enim at sit proin, sed ligula habitant praesent non fringilla.
       Faucibus nascetur consectetur fusce dolor hac efficitur ornare, tellus pharetra enim at sit proin, sed ligula habitant praesent non fringilla.
       Faucibus nascetur consectetur fusce dolor hac efficitur ornare, tellus pharetra enim at sit proin, sed ligula habitant praesent non fringilla.
       Faucibus nascetur consectetur fusce dolor hac efficitur ornare, tellus pharetra enim at sit proin, sed ligula habitant praesent non fringilla.
       Faucibus nascetur consectetur fusce dolor hac efficitur ornare, tellus pharetra enim at sit proin, sed ligula habitant praesent non fringilla.
-      Faucibus nascetur consectetur fusce dolor hac efficitur ornare, tellus pharetra enim at sit proin, sed ligula habitant praesent non fringilla.
-      Faucibus nascetur consectetur fusce dolor hac efficitur ornare, tellus pharetra enim at sit proin, sed ligula habitant praesent non fringilla.
-      Faucibus nascetur consectetur fusce dolor hac efficitur ornare, tellus pharetra enim at sit proin, sed ligula habitant praesent non fringilla.
-      Faucibus nascetur consectetur fusce dolor hac efficitur ornare, tellus pharetra enim at sit proin, sed ligula habitant praesent non fringilla.
-      Faucibus nascetur consectetur fusce dolor hac efficitur ornare, tellus pharetra enim at sit proin, sed ligula habitant praesent non fringilla.
-      Faucibus nascetur consectetur fusce dolor hac efficitur ornare, tellus pharetra enim at sit proin, sed ligula habitant praesent non fringilla.
-      Faucibus nascetur consectetur fusce dolor hac efficitur ornare, tellus pharetra enim at sit proin, sed ligula habitant praesent non fringilla.
-      Faucibus nascetur consectetur fusce dolor hac efficitur ornare, tellus pharetra enim at sit proin, sed ligula habitant praesent non fringilla.
-      Faucibus nascetur consectetur fusce dolor hac efficitur ornare, tellus pharetra enim at sit proin, sed ligula habitant praesent non fringilla.
-      Faucibus nascetur consectetur fusce dolor hac efficitur ornare, tellus pharetra enim at sit proin, sed ligula habitant praesent non fringilla.
-      Faucibus nascetur consectetur fusce dolor hac efficitur ornare, tellus pharetra enim at sit proin, sed ligula habitant praesent non fringilla.
+  - title: Hier etwas für die Main Stage
+    start: '11:30'
+    end: '12:00'
+    info: >
+      Nur mal so zum Testen.
+  - title: Hier etwas für die zweite Stage
+    start: '12:00'
+    end: '12:30'
+    stage: 'mobility'
+    info: >
+      Nur mal so zum Testen.
+  - title: Parallel
+    start: '12:00'
+    end: '12:40'
+    stage: 'blockchain'
+    info: >
+      Paralleles Event auf der anderen Stage
+  - title: Der zweite Punkt der Agenda
+    start: '12:00'
+    end: '14:30'
+    stage: "ups"
+    info: >
+       Fames posuere praesent ultricies.
+  - title: Ein freier Punkt
+    start: '15:00'
+    end: '17:30'
+    stage: "ups"
+    info: >
+       Fames posuere praesent ultricies.

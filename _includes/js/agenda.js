@@ -9,7 +9,7 @@
   $.fn.agenda = function( options ) {
 
     var settings = $.extend({
-      // defaults
+      main_stage: 'main'
     }, options);
 
     var no_obj = this.children().length;
@@ -58,33 +58,40 @@
       var height = $(element).outerHeight(true);
 
       var start_all = moment( $(element).data('start'), 'HH:mm');
-      var start_hours = moment( $(element).data('start'), 'HH:mm').endOf('hour').hours();
+      var start_hours = moment( $(element).data('start'), 'HH:mm').endOf('hour').format('HH').toString();
       var start_minutes = moment( $(element).data('start'), 'HH:mm').minutes();
 
       var end_all = moment( $(element).data('end'), 'HH:mm');
-      var end_hours = moment( $(element).data('end'), 'HH:mm').startOf('hour').hours();
+      var end_hours = moment( $(element).data('end'), 'HH:mm').startOf('hour').format('HH').toString();
       var end_minutes = moment( $(element).data('end'), 'HH:mm').minutes();
 
       var time_diff = end_all.diff(start_all, 'ms');
       var hpt = height / time_diff;
 
-      // function check_minutes() {
-      //   if ( !start_minutes == 0 ) {
-      //     start_hours = start_hours + 1;
-      //   }
-      //
-      //   if ( end_minutes == 0) {
-      //     end_hours = end_hours - 1;
-      //   }
-      // }
-      // check_minutes();
+      function check_minutes() {
+        // if ( !start_minutes == 0 ) {
+        //   start_hours = start_hours + 1;
+        // }
+
+        if ( end_minutes == 0) {
+          end_hours = end_hours - 1;
+        }
+      }
+      check_minutes();
 
 
       for (var i = start_hours; i <= end_hours; i++) {
-        $('.schedule_hour[data-agenda="' + i + '"]').css({
-          'height': hpt * 60000 * 60,
-          'background': 'red'
-        });
+        if ( i.toString().length == 1 ) {
+          i = '0' + i
+        }
+        var height = hpt * 60000 * 60;
+        var current_height = $('.schedule_hour[data-agenda="' + i + '"]').outerHeight(true);
+        if ( height > current_height ) {
+          $('.schedule_hour[data-agenda="' + i + '"]').css({
+            'height': height,
+            //'background': 'red'
+          });
+        }
       }
 
       // if ( (start_hours + 1) < end_hours ) {
@@ -101,43 +108,109 @@
       // }
     }
 
-    $('.schedule_el').each( function() {
-      calculate_el( this );
-    });
 
+    function stage_collection( element ) {
+      let stage =  $( element ).data('stage');
+      if ( stage != undefined && stage != settings.main_stage && stages.indexOf( stage ) < 0 ) {
+        stages.push( stage );
+      }
+      stage = undefined;
+    }
 
-    var schedule_height = $(this).height();
-    console.log(schedule_height);
+    //var schedule_height = $(this).height();
 
     function place_el( element ) {
 
-      var first_schedule_el = $('.schedule_hour').first().data('agenda');
-      first_schedule_el = moment(first_schedule_el, 'HH');
+      // var first_schedule_el = $('.schedule_hour').first().data('agenda');
+      // first_schedule_el = moment(first_schedule_el, 'HH');
+      //
+      // var last_schedule_el = $('.schedule_hour').last().data('agenda');
+      // last_schedule_el = moment(last_schedule_el, 'HH').endOf('hour');
+      //
+      //
+      // var schedule_duration = last_schedule_el.diff( first_schedule_el, 'm' );
+      //
+      // var schedule_hpt = schedule_height / schedule_duration;
+      //
+      // var el_start_time = moment( $(element).data('start'), "HH:mm" );
+      //
+      // var duration_since_start = el_start_time.diff( first_schedule_el, 'm' );
 
-      var last_schedule_el = $('.schedule_hour').last().data('agenda');
-      last_schedule_el = moment(last_schedule_el, 'HH').endOf('hour');
+      var el_start_hour = moment( $(element).data('start'), "HH:mm").format('HH').toString();
+      var el_start_minutes = moment( $(element).data('start'), "HH:mm").minutes();
+      var start_hour_element = $('.schedule_hour[data-agenda=' + el_start_hour + ']')
 
+      var el_end_hour = moment( $(element).data('end'), "HH:mm").format('HH').toString();
+      var el_end_minutes = moment( $(element).data('end'), "HH:mm").minutes();
+      var end_hour_element = $('.schedule_hour[data-agenda=' + el_end_hour + ']')
 
-      var schedule_duration = last_schedule_el.diff( first_schedule_el, 'm' );
+      var el_top_hpt = start_hour_element.outerHeight(true) / 60;
+      var top_offset = start_hour_element.position().top;
+      var top = top_offset + ( el_top_hpt * el_start_minutes );
 
-      var schedule_hpt = schedule_height / schedule_duration;
+      var el_bottom_hpt = end_hour_element.outerHeight(true) / 60;
+      var bottom_offset = end_hour_element.position().top;
+      var bottom = bottom_offset + ( el_bottom_hpt * el_end_minutes );
 
-      var el_start_time = moment( $(element).data('start'), "HH:mm" );
-
-      var duration_since_start = el_start_time.diff( first_schedule_el, 'm' );
-
-      console.log(schedule_height)
-      console.log(schedule_duration)
-      console.log(schedule_hpt);
-
-      $(element).css('top', schedule_hpt * duration_since_start + 100 )
+      var height = bottom - top;
+      var current_height = $( element ).outerHeight(true);
+      if ( height > current_height ) {
+        $(element).css({
+          'top': top + 2,
+          'height': height - 2
+        });
+      } else {
+        $(element).css({
+          'top': top + 2,
+          'height': current_height - 2
+        });
+      }
     }
 
-    setTimeout( function() {
-      $('.schedule_el').each( function( ) {
-        place_el( this );
-      });
-    }, 1000);
+    let stages = [];
+    $('.schedule_el').each( function( ) {
+      stage_collection( this );
+    });
+    const no_stages = stages.length;
+    const stage_width = 80 / no_stages;
+    for (var i = 0; i < stages.length; i++) {
+      let current_stage = stages[i]
+      let offset_left = 15;
+      var width;
+      var length;
+      if ( i == 0 ) {
+        width = 'calc(' + stage_width + '% - 1px)';
+        left = i * stage_width + offset_left + '%';
+      } else if ( i == ( stages.length - 1 ) ) {
+        width = 'calc(' + stage_width + '% - 1px)';
+        left = left = 'calc(' + i * stage_width + '% + ' + offset_left + '% + 1px)';
+      } else {
+        width = 'calc(' + stage_width + '% - 2px)';
+        left = 'calc(' + i * stage_width + '% + ' + offset_left + '% + 1px)';
+      }
+      $('.schedule_el[data-stage=' + current_stage + ']').css({
+        'width': width,
+        'left': left
+
+      })
+    }
+
+    function mobile_view( element ) {
+      var objects = [];
+      $( element ).each( function() {
+        objects.push( $( element ) );
+      })
+      for (var i = 0; i < objects.length; i++) {
+        
+      }
+    }
+
+
+    $('.schedule_el').each( function( ) {
+      calculate_el( this );
+      place_el( this );
+    });
+    mobile_view( $('.schedule_el') );
 
   }
 }(jQuery));

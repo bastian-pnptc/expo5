@@ -5,12 +5,19 @@ section.schedule {
 }
 
 .schedule_el {
-  width: 600px;
+  width: 60%;
   background: white;
   position: absolute;
   z-index: 1;
-  padding: 10px;
+  padding: 25px;
   top: 0;
+  left: 55%;
+  border: none;
+  transform: translateX(-50%);
+  &[data-stage]:not([data-stage='main']) {
+    transform: none;
+  }
+
 }
 
 .schedule_hour {
@@ -21,7 +28,8 @@ section.schedule {
   .schedule_hour_time {
     background: $dark;
     transform: translateY(-50%);
-    display: inline-block;left: 5%;
+    display: inline-block;
+    left: 2%;
     position: relative;
     padding: 5px;
   }
