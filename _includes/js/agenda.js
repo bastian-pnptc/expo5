@@ -220,8 +220,9 @@
           'width': activated_width
         }).addClass('activated');
         for (var i = 1; i <= stages.length; i++) {
-          var prev_el = $('.schedule_el[data-stage=' + stages[i - 1] + ']');
-          var left = ( prev_el.position().left ) + prev_el.outerWidth( true ) + 1;
+          // var prev_el = $('.schedule_el[data-stage=' + stages[i - 1] + ']');
+          // var left = ( prev_el.position().left ) + prev_el.outerWidth( true ) + 1;
+          var left = ( i - 1 ) * deactivated_width + ( i * gutter_spacing ) + ( ( $(window).width() * 0.8 ) - deactivated_space ) + ( $(window).width() * 0.15 );
           $('.schedule_el[data-stage=' + stages[i] + ']').css({
             'width': deactivated_width + 'px',
             'left': left + 'px'
@@ -249,8 +250,6 @@
               var stage_el = $('.schedule_el[data-stage=' + stages[i] + ']');
 
               if ( i > 0 ) {
-                // var prev_el = $('.schedule_el[data-stage=' + stages[i - 1] + ']');
-                // var left = ( prev_el.position().left ) + prev_el.outerWidth( true ) + 1 + 'px';
                 if ( stage < i ) {
                   var left = ( i - 1 ) * deactivated_width + ( i * gutter_spacing ) + ( ( $(window).width() * 0.8 ) - deactivated_space ) + ( $(window).width() * 0.15 );
                 } else {
@@ -261,7 +260,6 @@
               }
 
               if ( stage == i ) {
-                var new_width = activated_width + '%';
                 stage_el.css({
                   'width': activated_width,
                   'left': left
