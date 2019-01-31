@@ -168,30 +168,35 @@
     }
 
     let stages = [];
-    $('.schedule_el').each( function( ) {
-      stage_collection( this );
-    });
-    const no_stages = stages.length;
-    const stage_width = 80 / no_stages;
-    for (var i = 0; i < stages.length; i++) {
-      let current_stage = stages[i]
-      let offset_left = 15;
-      var width;
-      var length;
-      if ( i == 0 ) {
-        width = 'calc(' + stage_width + '% - 1px)';
-        left = i * stage_width + offset_left + '%';
-      } else if ( i == ( stages.length - 1 ) ) {
-        width = 'calc(' + stage_width + '% - 1px)';
-        left = left = 'calc(' + i * stage_width + '% + ' + offset_left + '% + 1px)';
-      } else {
-        width = 'calc(' + stage_width + '% - 2px)';
-        left = 'calc(' + i * stage_width + '% + ' + offset_left + '% + 1px)';
-      }
-      $('.schedule_el[data-stage=' + current_stage + ']').css({
-        'width': width,
-        'left': left
+    function multi_stage() {
+      $('.schedule_el').each( function( ) {
+        stage_collection( this );
+      });
+      const no_stages = stages.length;
+      const stage_width = 80 / no_stages;
+      for (var i = 0; i < stages.length; i++) {
+        let current_stage = stages[i]
+        let offset_left = 15;
+        var width;
+        var length;
+        if ( i == 0 ) {
+          width = 'calc(' + stage_width + '% - 1px)';
+          left = i * stage_width + offset_left + '%';
+        } else if ( i == ( stages.length - 1 ) ) {
+          width = 'calc(' + stage_width + '% - 1px)';
+          left = left = 'calc(' + i * stage_width + '% + ' + offset_left + '% + 1px)';
+        } else {
+          width = 'calc(' + stage_width + '% - 2px)';
+          left = 'calc(' + i * stage_width + '% + ' + offset_left + '% + 1px)';
+        }
+        $('.schedule_el[data-stage=' + current_stage + ']').css({
+          'width': width,
+          'left': left
 
+        })
+      }
+      $('.schedule_el').each( function() {
+        $( this ).removeClass(' animation_ready deactivated activated')
       })
     }
 
@@ -284,6 +289,7 @@
 
 
     $('.schedule_el').each( function( ) {
+      multi_stage();
       calculate_el( this );
       place_el( this );
     });
@@ -296,6 +302,7 @@
     $(window).resize(function(){
       if( $(window).width() != window_width ){
         $('.schedule_el').each( function( ) {
+          multi_stage();
           calculate_el( this );
           place_el( this );
         });
