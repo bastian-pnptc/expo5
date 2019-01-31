@@ -1,8 +1,13 @@
 <section class="schedule">
   {% for el in site.data.agenda.agenda %}
     <div class="schedule_el br sans-serif schedule_el_{{ forloop.index }}" data-start="{{ el.start }}" data-end="{{ el.end }}" {% if el.stage %}data-stage="{{ el.stage }}"{% else %}data-stage="main"{% endif %}>
-      <p class="b">{{ el.title }}</p>
-      <p>{{ el.start }} — {{ el.end }}</p>
+      <div class="schedule__stage_marker">
+        {% if el.stage %}
+        <p class="b ttu white">{{ el.stage }} Stage</p>
+        {% endif %}
+      </div>
+      <time class="b">{{ el.start }} — {{ el.end }}</time>
+      <h3 class="b ttu">{{ el.title }}</h3>
       <p>{{ el.info }}</p>
       {% if el.stage %}
       <div class="schedule_open white b ttu">
