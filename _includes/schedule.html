@@ -4,6 +4,12 @@
       <p class="b">{{ el.title }}</p>
       <p>{{ el.start }} — {{ el.end }}</p>
       <p>{{ el.info }}</p>
+      {% if el.stage %}
+      <div class="schedule_open white b ttu">
+        <p>{{ el.stage }}</p>
+        <p>Stage <i class="fas fa-caret-down"></i></p>
+      </div>
+      {% endif %}
     </div>
   {% endfor %}
 </section>

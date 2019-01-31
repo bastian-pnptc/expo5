@@ -13,11 +13,50 @@ section.schedule {
   top: 0;
   left: 55%;
   border: none;
+  overflow: hidden;
   transform: translateX(-50%);
   &[data-stage]:not([data-stage='main']) {
     transform: none;
   }
-
+  .schedule_open {
+    //display: none;
+  }
+  &.deactivated {
+    cursor: pointer;
+    &:before {
+      content: '';
+      background: $red;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .schedule_open {
+      @include display_flex;
+      @include justify-content( flex-end );
+      position: absolute;
+      left: 0;
+      bottom: 100%;
+      transform: rotate(270deg) translate(-100%, 50%);
+      transform-origin: bottom;
+      width: 50px;
+      white-space: nowrap;
+      p {
+        padding: 0;
+        &+p {
+          padding-left: 20px;
+        }
+      }
+      i {
+        margin-left: 10px;
+        transform: scale(1.8);
+      }
+    }
+  }
+  &.animation_ready {
+    transition: all linear .4s;
+  }
 }
 
 .schedule_hour {

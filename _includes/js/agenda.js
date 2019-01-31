@@ -195,14 +195,93 @@
       })
     }
 
+    // Check if there is an overlaps with another item
+    // 201901311622
     function mobile_view( element ) {
-      var objects = [];
-      $( element ).each( function() {
-        objects.push( $( element ) );
-      })
-      for (var i = 0; i < objects.length; i++) {
-        
+
+      // Check if there is an overlaps with another item
+      // 201901311622
+      // var objects = [];
+      // $( element ).each( function() {
+      //   objects.push( $( element ) );
+      // })
+      // for (var i = 0; i < objects.length; i++) {
+      //
+      // }
+
+      if ( $(window).width() < 992 ) {
+        var no_stages = stages.length;
+        var gutter_spacing = 1;
+        var deactivated_width = 50;
+        var deactivated_space = ( ( no_stages - 2 ) * ( 2 * gutter_spacing ) + ( 2 * gutter_spacing ) ) + ( ( no_stages - 1 ) * deactivated_width );
+        var activated_width = 'calc(80% - ' + deactivated_space + 'px)';
+
+        $('.schedule_el[data-stage=' + stages[0] + ']').css({
+          'width': activated_width
+        }).addClass('activated');
+        for (var i = 1; i <= stages.length; i++) {
+          var prev_el = $('.schedule_el[data-stage=' + stages[i - 1] + ']');
+          var left = ( prev_el.position().left ) + prev_el.outerWidth( true ) + 1;
+          $('.schedule_el[data-stage=' + stages[i] + ']').css({
+            'width': deactivated_width + 'px',
+            'left': left + 'px'
+          }).addClass('deactivated');
+        }
+
+        setTimeout( function() {
+          $('.schedule_el').each( function() {
+            $(this).addClass('animation_ready');
+          });
+        }, 600)
+
+        $('.schedule_el').click( function() {
+          var no_stages = stages.length;
+          var gutter_spacing = 1;
+          var deactivated_width = 50;
+          var deactivated_space = ( ( no_stages - 2 ) * ( 2 * gutter_spacing ) + ( 2 * gutter_spacing ) ) + ( ( no_stages - 1 ) * deactivated_width );
+          var activated_width = 'calc(80% - ' + deactivated_space + 'px)';
+          console.log(activated_width);
+
+          if ( $( this ).hasClass( 'deactivated' ) ) {
+            var stage = $( this ).data('stage');
+            stage = stages.indexOf( stage );
+            for (var i = 0; i < stages.length; i++) {
+              var stage_el = $('.schedule_el[data-stage=' + stages[i] + ']');
+
+              if ( i > 0 ) {
+                // var prev_el = $('.schedule_el[data-stage=' + stages[i - 1] + ']');
+                // var left = ( prev_el.position().left ) + prev_el.outerWidth( true ) + 1 + 'px';
+                if ( stage < i ) {
+                  var left = ( i - 1 ) * deactivated_width + ( i * gutter_spacing ) + ( ( $(window).width() * 0.8 ) - deactivated_space ) + ( $(window).width() * 0.15 );
+                } else {
+                  var left = i * deactivated_width +  ( i * gutter_spacing ) + ( $(window).width() * 0.15 );
+                }
+              } else {
+                var left = '15%';
+              }
+
+              if ( stage == i ) {
+                var new_width = activated_width + '%';
+                stage_el.css({
+                  'width': activated_width,
+                  'left': left
+                }).removeClass('deactivated').addClass( 'activated' );
+              } else if ( stage_el.hasClass('activated') ) {
+                stage_el.css({
+                  'width': deactivated_width + 'px',
+                  'left': left
+                }).addClass('deactivated').removeClass( 'activated' );
+              } else {
+                stage_el.css({
+                  'left': left
+                })
+              }
+
+            }
+          }
+        })
       }
+
     }
 
 
@@ -211,6 +290,21 @@
       place_el( this );
     });
     mobile_view( $('.schedule_el') );
+
+    // resizes recalculation
+    var window_width = $(window).width();
+
+
+    $(window).resize(function(){
+      if( $(window).width() != window_width ){
+        $('.schedule_el').each( function( ) {
+          calculate_el( this );
+          place_el( this );
+        });
+        mobile_view( $('.schedule_el') );
+        window_width = $(window).width();
+      }
+    });
 
   }
 }(jQuery));
