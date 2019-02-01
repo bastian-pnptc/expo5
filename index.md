@@ -31,7 +31,7 @@ corporates:
     We are not a single corporation trying to innovate ourself but rather a heterogenous family who took the chance and started to learn from each other and from projects all around the globe.
 flashback:
   intro: >
-    This year is actually the 3rd of our existens. That said we already hold amazing EXPO Days in recent years. Curious how that looked like and kind of — we changed the concept for this years EXPO Day quite a lot so stay tuned — see what to expect:
+    This year is actually the 3rd of our existence. That said we already hold amazing EXPO Days in recent years. Curious how that looked like and kind of — we changed the concept for this years EXPO Day quite a lot so stay tuned — see what to expect:
 
     Check out our belows impressions.
   video:
