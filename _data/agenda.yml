@@ -24,6 +24,16 @@ agenda:
     start: '12:00'
     end: '12:40'
     stage: 'blockchain'
+    tags:
+      - pitch
+      - panel
+    speakers:
+      - name: Christoph Stadeler
+        position: Director Automotive
+        company: Facebook EMEA
+      - name: Anela Böse
+        position: Director Connected Car Electric/Electronics
+        company: Porsche
     info: >
       Paralleles Event auf der anderen Stage
   - title: Der zweite Punkt der Agenda

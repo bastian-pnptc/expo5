@@ -8,6 +8,21 @@
       </div>
       <time class="b">{{ el.start }} — {{ el.end }}</time>
       <h3 class="b ttu">{{ el.title }}</h3>
+      {% if el.tags %}
+      <div class="schedule__tags">
+        {% for tag in el.tags %}
+          <p class="br ttu white b">{{ tag }}</p>
+        {% endfor %}
+      </div>
+      {% endif %}
+      {% if el.speakers %}
+        <p class="ttu b speaker_head">Speaker</p>
+        <ul>
+        {% for speaker in el.speakers %}
+          <li><span class="ttu b">{{ speaker.name }}</span><br>{{ speaker.position }}, {{ speaker.company }}</li>
+        {% endfor %}
+        </ul>
+      {% endif %}
       <p>{{ el.info }}</p>
       {% if el.stage %}
       <div class="schedule_open white b ttu">

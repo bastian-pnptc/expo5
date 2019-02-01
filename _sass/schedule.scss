@@ -65,7 +65,7 @@ section.schedule {
     transition: all linear .4s;
   }
   .schedule__stage_marker {
-    background: $red;
+    background: $dark;
     padding: 5px 25px 5px;
     position: absolute;
     top: 0;
@@ -78,14 +78,30 @@ section.schedule {
   &[data-stage="main"] .schedule__stage_marker {
     display: none;
   }
-  &[data-stage="mobility"] .schedule__stage_marker {
-    background: blue;
+  &[data-stage="mobility"]  {
+    .schedule__stage_marker,
+    .schedule__tags p,
+    &.deactivated:before {
+      background: $green;
+    }
   }
-  &[data-stage="blockchain"] .schedule__stage_marker {
-    background: green;
+  &[data-stage="blockchain"]  {
+    .schedule__stage_marker,
+    .schedule__tags p,
+    &.deactivated:before {
+      background: $red;
+    }
   }
-  &[data-stage="ups"] .schedule__stage_marker {
-    background: purple;
+  &[data-stage="ups"]  {
+    .schedule__stage_marker,
+    .schedule__tags p,
+    &.deactivated:before {
+      background: $yellow;
+    }
+  }
+  p {
+    font-size: .9em;
+    max-width: 500px;
   }
   time {
     font-size: 11px;
@@ -93,7 +109,36 @@ section.schedule {
   }
   h3 {
     font-size: 16px;
-    margin-top: .5em;
+    line-height: 1.2em;
+    margin: .5em 0;
+  }
+  ul {
+    padding-left: 0;
+    list-style: none;
+    margin: 0 0 20px;
+    font-size: .8em;
+    li {
+      &+li {
+        margin-top: .6em;
+      }
+    }
+  }
+  p.speaker_head {
+    opacity: .5;
+    font-size: 11px;
+  }
+  .schedule__tags {
+    @include display_flex;
+    margin-bottom: 1em;
+    p {
+      display: inline;
+      padding: 4px 10px 2px;
+      border: none;
+      font-size: .8em;
+      & + p {
+        margin-left: 5px;
+      }
+    }
   }
 }
 
