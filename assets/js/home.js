@@ -44,7 +44,7 @@ function read_more() {
   $('.speaker__item').each( function() {
     var section = $(this).find('.speaker__info');
     var read_more = $(this).find('.read_more');
-    var desc_padding = $(section).find('.desc').outerHeight() - $(section).find('.desc').height();
+    var desc_padding = $(section).find('.desc').outerHeight() - $(section).find('.desc').height() + 2;
     var sub_el = $(read_more).height() - desc_padding;
     var link = $(section).find('a.link').outerHeight(true) - $(section).find('a.link').height();
     if (link > 0) {
