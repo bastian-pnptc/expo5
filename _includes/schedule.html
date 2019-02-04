@@ -7,7 +7,10 @@
         {% endif %}
       </div>
       <time class="b">{{ el.start }} — {{ el.end }}</time>
-      <h3 class="b ttu">{{ el.title }}</h3>
+      <div class="schedule_el__header">
+        <h3 class="b ttu">{{ el.title }}</h3>
+        {% if el.topic %}<p class="topic">{{ el.topic }}</p>{% endif %}
+      </div>
       {% if el.tags %}
       <div class="schedule__tags">
         {% for tag in el.tags %}
@@ -19,7 +22,7 @@
         <p class="ttu b speaker_head">Speaker</p>
         <ul>
         {% for speaker in el.speakers %}
-          <li><span class="ttu b">{{ speaker.name }}</span><br>{{ speaker.position }}, {{ speaker.company }}</li>
+          <li><span class="ttu b">{{ speaker.name }}</span><br>{{ speaker.position }}{% if speaker.position AND speaker.company %}, {% endif %}{{ speaker.company }}</li>
         {% endfor %}
         </ul>
       {% endif %}

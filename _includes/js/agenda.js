@@ -138,11 +138,11 @@
 
       var el_start_hour = moment( $(element).data('start'), "HH:mm").format('HH').toString();
       var el_start_minutes = moment( $(element).data('start'), "HH:mm").minutes();
-      var start_hour_element = $('.schedule_hour[data-agenda=' + el_start_hour + ']')
+      var start_hour_element = $('.schedule_hour[data-agenda="' + el_start_hour + '"]')
 
       var el_end_hour = moment( $(element).data('end'), "HH:mm").format('HH').toString();
       var el_end_minutes = moment( $(element).data('end'), "HH:mm").minutes();
-      var end_hour_element = $('.schedule_hour[data-agenda=' + el_end_hour + ']')
+      var end_hour_element = $('.schedule_hour[data-agenda="' + el_end_hour + '"]')
 
       var el_top_hpt = start_hour_element.outerHeight(true) / 60;
       var top_offset = start_hour_element.position().top;
@@ -189,7 +189,7 @@
           width = 'calc(' + stage_width + '% - 2px)';
           left = 'calc(' + i * stage_width + '% + ' + offset_left + '% + 1px)';
         }
-        $('.schedule_el[data-stage=' + current_stage + ']').css({
+        $('.schedule_el[data-stage="' + current_stage + '"]').css({
           'width': width,
           'left': left
 
@@ -221,14 +221,14 @@
         var deactivated_space = ( ( no_stages - 2 ) * ( 2 * gutter_spacing ) + ( 2 * gutter_spacing ) ) + ( ( no_stages - 1 ) * deactivated_width );
         var activated_width = 'calc(80% - ' + deactivated_space + 'px)';
 
-        $('.schedule_el[data-stage=' + stages[0] + ']').css({
+        $('.schedule_el[data-stage="' + stages[0] + '"]').css({
           'width': activated_width
         }).addClass('activated');
         for (var i = 1; i <= stages.length; i++) {
           // var prev_el = $('.schedule_el[data-stage=' + stages[i - 1] + ']');
           // var left = ( prev_el.position().left ) + prev_el.outerWidth( true ) + 1;
           var left = ( i - 1 ) * deactivated_width + ( i * gutter_spacing ) + ( ( $(window).width() * 0.8 ) - deactivated_space ) + ( $(window).width() * 0.15 );
-          $('.schedule_el[data-stage=' + stages[i] + ']').css({
+          $('.schedule_el[data-stage="' + stages[i] + '"]').css({
             'width': deactivated_width + 'px',
             'left': left + 'px'
           }).addClass('deactivated');
@@ -252,7 +252,7 @@
             var stage = $( this ).data('stage');
             stage = stages.indexOf( stage );
             for (var i = 0; i < stages.length; i++) {
-              var stage_el = $('.schedule_el[data-stage=' + stages[i] + ']');
+              var stage_el = $('.schedule_el[data-stage="' + stages[i] + '"]');
 
               if ( i > 0 ) {
                 if ( stage < i ) {
@@ -291,6 +291,9 @@
     $('.schedule_el').each( function( ) {
       multi_stage();
       calculate_el( this );
+    });
+
+    $('.schedule_el').each( function( ) {
       place_el( this );
     });
     mobile_view( $('.schedule_el') );

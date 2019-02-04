@@ -1,50 +1,352 @@
 agenda:
-  - title: Der erste Agendapunkt
-    start: '08:25'
-    end: '11:00'
+  - title: Doors Open
+    start: '12:30'
+    end: '14:00'
     stage: "main"
     info: >
-      Faucibus nascetur consectetur fusce dolor hac efficitur ornare, tellus pharetra enim at sit proin, sed ligula habitant praesent non fringilla.
-      Faucibus nascetur consectetur fusce dolor hac efficitur ornare, tellus pharetra enim at sit proin, sed ligula habitant praesent non fringilla.
-      Faucibus nascetur consectetur fusce dolor hac efficitur ornare, tellus pharetra enim at sit proin, sed ligula habitant praesent non fringilla.
-      Faucibus nascetur consectetur fusce dolor hac efficitur ornare, tellus pharetra enim at sit proin, sed ligula habitant praesent non fringilla.
-      Faucibus nascetur consectetur fusce dolor hac efficitur ornare, tellus pharetra enim at sit proin, sed ligula habitant praesent non fringilla.
-  - title: Hier etwas für die Main Stage
-    start: '11:30'
-    end: '12:00'
+      Networking: Get to know the people attending todays event
+  - title: Grand Opening
+    start: '14:00'
+    end: '14:30'
     info: >
       Nur mal so zum Testen.
-  - title: Hier etwas für die zweite Stage
-    start: '12:00'
-    end: '12:30'
-    stage: 'mobility'
+    speakers:
+      - name: Winfried Kretschmann
+        position: Minister President
+        company: State of Baden-Württemberg
+      - name: Saeed Amidi
+        position: Founder & CEO
+        company: Plug and Play Techcenter
+      - name: Sascha Karimpour
+        position: Managing Director
+        company: Plug & Play Germany
+    info: Welcome Ceremony hosted by Patrice Bouédibéla
+  - title: Keynote
+    topic: "A user-centered design approach to driverless cars"
+    start: '14:30'
+    end: '15:00'
     info: >
-      Nur mal so zum Testen.
-  - title: Parallel
-    start: '12:00'
-    end: '12:40'
-    stage: 'blockchain'
+      A USER–CENTRED DESIGN APPROACH TO DRIVERLESS CARS<br>
+      What will we want from driverless cars of the future? What are our human needs for the technology? We need to understand the answers to these questions so that we can design the technology in a way that can be adopted by all - not the fortunate few. Following the release of ustwo Auto’s second book, Humanising Autonomy: Where Are We Going?, Tim‘s talk draws on some of the key insights from the research and user testing that the book is built around and shows off some real world user–centred designs for driverless cars.
+    speakers:
+      - name: Tim Smith,
+        position: Global Auto & Mobility Lead
+        company: uswto
+  - title: Announcement
+    start: '15:00'
+    end: '15:30'
+    info: >
+      Introducing new STARTUP AUTOBAHN Partners, announced by David Neef, Partnership Director, Plug & Play Germany
+  - title: Future Talk
+    start: '15:30'
+    end: '16:00'
     tags:
-      - pitch
-      - panel
+      - talk
+    stage: 'FUTURE OF MOBILITY'
     speakers:
       - name: Christoph Stadeler
-        position: Director Automotive
-        company: Facebook EMEA
+        position: Director Automotive EMEA
+        company: Facebook
       - name: Anela Böse
         position: Director Connected Car Electric/Electronics
         company: Porsche
+      - name: Vlado Koljibabic
+        company: Daimler
+        position: Head of CASE IT
+    topic: 'Topic: Does digital disruption eat the car industry for breakfast?'
+  - title: Future Talk
+    start: '15:30'
+    end: '16:00'
+    topic: 'Are humans still at the center of I4.0?'
+    stage: 'FUTURE OF PRODUCTION'
+    tags:
+      - talk
+    speakers:
+      - name: Simon Hadaddin
+        position: CEO & Co-Founder
+        company: Franka Emika
+      - name: Uwe Braun
+        position: Director HR
+        company: Daimler
+      - name: Simon Schumacher
+        position: Future Work Lab
+        company: Fraunhofer IPA
+      - name: Fatmir Kqiku
+        position: 'Practice Partner, Robots, Robotics and Automation'
+        company: DXC
     info: >
-      Paralleles Event auf der anderen Stage
-  - title: Der zweite Punkt der Agenda
-    start: '12:00'
-    end: '14:30'
-    stage: "ups"
+      Hosted by Stephan Dörner, Editor-in-Chief t3n
+  - title: Future Talk
+    start: '15:30'
+    end: '16:00'
+    topic: 'Collaboration with Startups - Hype or Necessity? The Corporate Perspective'
+    stage: 'FUTURE OF ENTERPRISE'
+    tags:
+      - talk
+    speakers:
+      - name: Dr. Gisela Linge
+        position: Director Coprorate Strategy
+        company: Webasto
+      - name: Wolfgang Herbst
+        position: Regional CTO for North and Central Europe
+        company: DXC Technology
+      - name: Charles Vaillant
+        position: CTO
+        company: Mann & Hummel
     info: >
-       Fames posuere praesent ultricies.
-  - title: Ein freier Punkt
-    start: '15:00'
+      Hosted by Patrice Bouédibéla
+
+  - title: Software Intelligence - made in Tel Aviv
+    start: '16:00'
+    end: '16:30'
+    tags:
+      - talk
+      - pitch
+    stage: 'FUTURE OF MOBILITY'
+    speakers:
+      - name: Zohar Fox
+        position: CEO
+        company: Aurora Labs
+      - name: Amir Adamov
+        position: CEO
+        company: WhiteRaven
+    topic: 'Topic: Does digital disruption eat the car industry for breakfast?'
+    info: >
+      Hosted by Stephan Dörner, Editor-in-Chief t3n
+  - title: Robotic Pitching
+    start: '16:00'
+    end: '16:40'
+    topic: 'Are humans still at the center of I4.0?'
+    stage: 'FUTURE OF PRODUCTION'
+    tags:
+      - live demo
+      - pitch
+    speakers:
+      - name: Jens Heinrich
+        position: 'Co-Founder & CEO'
+        company: naise
+      - name: Eric Wenig
+        position: Head of Sales
+        company: Kinexon
+      - name: Martin Naumann
+        position: CEO
+        company: drag&bot
+  - title: AI/Machine Learning
+    start: '16:00'
+    end: '16:15'
+    stage: 'FUTURE OF ENTERPRISE'
+    tags:
+      - pitch
+    speakers:
+      - name: Vahan Tchakerian
+        position: Global Sales and Field Operations Executive
+        company: Cogniac
+      - name: Jerome Flint
+        position: VP International Markets
+        company: e-bot7
+      - name: Karina Buschsieweke
+        position: Managing Director
+        company: Lana Labs
+      - name: Christian Heß
+        position: Prävention und Data Analytics Montageprozesse
+        company: Daimler
+  - title:  HR + Sales
+    start: '16:15'
+    end: '16:30'
+    stage: 'FUTURE OF ENTERPRISE'
+    tags:
+      - pitch
+    speakers:
+      - name: Stefan Versteeg
+        position: Sales Director
+        company: Crunchr
+      - name: Benjamin Pieck
+        position: Co-Founder
+        company: Matchingbox
+      - name: Frank Feulner
+        position: CBDO
+        company: AX Semantics
+  - title:  Future Talk
+    topic: 'Venture Capital: Wasted Money or Game Changer for the Future?'
+    start: '16:30'
+    end: '16:45'
+    stage: 'FUTURE OF ENTERPRISE'
+    tags:
+      - panel
+    speakers:
+      - name: Georg Stockinger
+        company: Pauaventures
+      - name: Sebastian Peck
+        company: InMotion
+      - name: Andy Toth
+        position: 'Investment Director, Germany'
+        company: Plug and Play Germany
+  - title: Do you like to shop or do you want to share?
+    start: '16:30'
+    end: '17:00'
+    tags:
+      - talk
+      - pitch
+    stage: 'FUTURE OF MOBILITY'
+    speakers:
+      - name: Aviv Frenkel
+        position: Co-Founder & CEO
+        company: Enroute
+      - name: Timothée Boitouzet
+        position: CEO
+        company: Woodoo
+    topic: 'Topic: Does digital disruption eat the car industry for breakfast?'
+    info: >
+      Hosted by Alexander Langer, Deputy Editor-in-Chief at Business Punk
+  - title: VR/AR
+    start: '16:40'
+    end: '16:50'
+    stage: 'FUTURE OF PRODUCTION'
+    tags:
+      - pitch
+    speakers:
+      - name: Harald Wuest
+        position: CEO
+        company: Visometry
+      - name: Aditya Prem
+        position: CTO
+        company: Ainak
+  - title: Maintenance & Quality Pitching
+    start: '16:50'
+    end: '17:20'
+    stage: 'FUTURE OF PRODUCTION'
+    tags:
+      - pitch
+      - live demo
+    speakers:
+      - name: Mathieu Noirot-Cosson
+        position: Key Account Manager
+        company: Flyability
+      - name: Kai Saksela
+        position: CEO
+        company: Noiseless Acoustics
+      - name: Jiri Cermak
+        position: Technology Evangelist
+        company: Neuron Soundware
+  - title:  Software Tools
+    topic: 'Venture Capital: Wasted Money or Game Changer for the Future?'
+    start: '16:45'
+    end: '17:15'
+    stage: 'FUTURE OF ENTERPRISE'
+    tags:
+      - pitch
+    speakers:
+      - name: Sven Zuschlag
+        position: CEO
+        company: SmapOne
+      - name: Dragos Grozavu
+        position: Founder and Chief Business Officer
+        company: Cogatech
+      - name: Steffen Iwan
+        position: Head of Business Development
+        company: Contiamo
+      - name: Matthias Nieser
+        position: CEO
+        company: Quadcover
+      - name: Markus Trostel
+        company: Dedrone
+      - name: Vishal Rai
+        position: CEO
+        company: Acellere
+  - title: What technologies impact the future of autonomous driving?
+    start: '17:00'
     end: '17:30'
-    stage: "ups"
+    tags:
+      - talk
+      - pitch
+    stage: 'FUTURE OF MOBILITY'
+    speakers:
+      - name: Stefan Jenzowsky
+        position: CEO & Co-Founder
+        company: Kopernikus
+      - name: Christian Flechl
+        position: Managing Director
+        company: Volterio
     info: >
-       Fames posuere praesent ultricies.
+      Hosted by Peter Kenneth Campbell, Financial Times
+  - title: Meet ARENA2036
+    start: '17:20'
+    end: '17:30'
+    stage: 'FUTURE OF PRODUCTION'
+    tags:
+      - talk
+    speakers:
+      - name: tba
+        company: ARENA2036
+  - title:  Future Talk
+    topic: 'Collaboration with Corporates – Playing to their rules or changing the world on my own? The Startup Perspective.'
+    start: '17:15'
+    end: '17:30'
+    stage: 'FUTURE OF ENTERPRISE'
+    tags:
+      - panel
+    speakers:
+      - name: Sven Zuschlag
+        position: CEO
+        corporate: SmapOne
+      - name: Benjamin Pieck
+        position: Co-Founder
+        corporate: Matchingbox
+      - name: Steffen Iwan
+        positon: Head of Business Development
+        corporate: Contiamo
+      - name: Karina Buschsieweke
+        position: Managing Director
+        corporate: Lana Labs
+  - title: Future Talk
+    topic: 'What is the role of mobility in 2050?'
+    start: '17:30'
+    end: '18:00'
+    tags:
+      - panel
+    stage: 'FUTURE OF MOBILITY'
+    speakers:
+      - name: Hui Zhang
+        position: Managing Director
+        company: NIO
+      - name: Patrick Kück,
+        position: Director Strategy & Innovation
+        company: Porsche
+  - title: Future Talk
+    topic: 'Enough with Industrie 4.0 - what´s next?'
+    start: '17:30'
+    end: '18:00'
+    tags:
+      - panel
+    stage: 'FUTURE OF PRODUCTION'
+    speakers:
+      - name: Matthias Röse
+        position: 'Chief Technologist for Manufacturing, Automotive & IoT'
+        company: HPE
+      - name: Gero Adrian
+        position: Client Principal
+        company: Manufacturing Expert DXC
+    info: >
+      hosted by Peter Froeschle, Chairman, ARENA 2036
+  - title: Talk
+    topic: 'The thinking of a poker player — devisions under uncertainty'
+    start: '17:30'
+    end: '18:00'
+    tags:
+      - panel
+    stage: 'FUTURE OF ENTERPRISE'
+    speakers:
+      - name: Jan Heitmann
+        position: Poker Expert
+    info: >
+      Poker and business have a lot in common: the bad players often do not know, what kind of game they are even playing. Poker works great as a model for decision making. There is something to be gained (the pot in the middle), something you have to risk for it (by betting), all under time pressure and financial restraints, against competent competition, under uncertainty and incomplete information. Using Poker as a model, Jan Heitmann explains concepts and strategies used by world class poker players to make better decision under uncertainty. Be sure to check out his talk at the Interactive stage!
+  - title: Closing Keynote
+    topic: 'Meet the Tesla of China'
+    start: '18:00'
+    end: '18:30'
+    speakers:
+      - name: Hui Zhang
+        partner: Managing Director
+        company: NIO
+    info: >
+      Poker and business have a lot in common: the bad players often do not know, what kind of game they are even playing. Poker works great as a model for decision making. There is something to be gained (the pot in the middle), something you have to risk for it (by betting), all under time pressure and financial restraints, against competent competition, under uncertainty and incomplete information. Using Poker as a model, Jan Heitmann explains concepts and strategies used by world class poker players to make better decision under uncertainty. Be sure to check out his talk at the Interactive stage!

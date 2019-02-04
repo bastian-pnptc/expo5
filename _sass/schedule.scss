@@ -78,30 +78,33 @@ section.schedule {
   &[data-stage="main"] .schedule__stage_marker {
     display: none;
   }
-  &[data-stage="mobility"]  {
+  &[data-stage="FUTURE OF MOBILITY"]  {
     .schedule__stage_marker,
     .schedule__tags p,
     &.deactivated:before {
       background: $green;
     }
   }
-  &[data-stage="blockchain"]  {
+  &[data-stage="FUTURE OF PRODUCTION"]  {
     .schedule__stage_marker,
     .schedule__tags p,
     &.deactivated:before {
       background: $red;
     }
   }
-  &[data-stage="ups"]  {
+  &[data-stage="FUTURE OF ENTERPRISE"]  {
     .schedule__stage_marker,
     .schedule__tags p,
     &.deactivated:before {
       background: $yellow;
     }
   }
+  .schedule_el__header {
+    margin: .5em 0 1em;
+  }
   p {
     font-size: .9em;
-    max-width: 500px;
+    max-width: 600px;
   }
   time {
     font-size: 11px;
@@ -110,7 +113,7 @@ section.schedule {
   h3 {
     font-size: 16px;
     line-height: 1.2em;
-    margin: .5em 0;
+    margin: 0;
   }
   ul {
     padding-left: 0;
@@ -135,6 +138,7 @@ section.schedule {
       padding: 4px 10px 2px;
       border: none;
       font-size: .8em;
+      background: black;
       & + p {
         margin-left: 5px;
       }
