@@ -1,38 +1,46 @@
 <section class="schedule">
-  {% for el in site.data.agenda.agenda %}
-    <div class="schedule_el br sans-serif schedule_el_{{ forloop.index }}" data-start="{{ el.start }}" data-end="{{ el.end }}" {% if el.stage %}data-stage="{{ el.stage }}"{% else %}data-stage="main"{% endif %}>
-      <div class="schedule__stage_marker">
+  <div class="container sans-serif">
+    <h2 class="red b ttu">{{ page.schedule.title }}</h2>
+    <div class="intro white">
+      {{ page.schedule.intro | markdownify }}
+    </div>
+  </div>
+  <div class="schedule_anchor">
+    {% for el in site.data.agenda.agenda %}
+      <div class="schedule_el br sans-serif schedule_el_{{ forloop.index }}" data-start="{{ el.start }}" data-end="{{ el.end }}" {% if el.stage %}data-stage="{{ el.stage }}"{% else %}data-stage="main"{% endif %}>
+        <div class="schedule__stage_marker">
+          {% if el.stage %}
+          <p class="b ttu white">{{ el.stage }} Stage</p>
+          {% endif %}
+        </div>
+        <time class="b">{{ el.start }} — {{ el.end }}</time>
+        <div class="schedule_el__header">
+          <h3 class="b ttu">{{ el.title }}</h3>
+          {% if el.topic %}<p class="topic">{{ el.topic }}</p>{% endif %}
+        </div>
+        {% if el.tags %}
+        <div class="schedule__tags">
+          {% for tag in el.tags %}
+            <p class="br ttu white b">{{ tag }}</p>
+          {% endfor %}
+        </div>
+        {% endif %}
+        {% if el.speakers %}
+          <p class="ttu b speaker_head">Speaker</p>
+          <ul>
+          {% for speaker in el.speakers %}
+            <li><span class="ttu b">{{ speaker.name }}</span><br>{{ speaker.position }}{% if speaker.position AND speaker.company %}, {% endif %}{{ speaker.company }}</li>
+          {% endfor %}
+          </ul>
+        {% endif %}
+        {{ el.info | markdownify }}
         {% if el.stage %}
-        <p class="b ttu white">{{ el.stage }} Stage</p>
+        <div class="schedule_open white b ttu">
+          <p>{{ el.stage }}</p>
+          <p>Stage <i class="fas fa-caret-down"></i></p>
+        </div>
         {% endif %}
       </div>
-      <time class="b">{{ el.start }} — {{ el.end }}</time>
-      <div class="schedule_el__header">
-        <h3 class="b ttu">{{ el.title }}</h3>
-        {% if el.topic %}<p class="topic">{{ el.topic }}</p>{% endif %}
-      </div>
-      {% if el.tags %}
-      <div class="schedule__tags">
-        {% for tag in el.tags %}
-          <p class="br ttu white b">{{ tag }}</p>
-        {% endfor %}
-      </div>
-      {% endif %}
-      {% if el.speakers %}
-        <p class="ttu b speaker_head">Speaker</p>
-        <ul>
-        {% for speaker in el.speakers %}
-          <li><span class="ttu b">{{ speaker.name }}</span><br>{{ speaker.position }}{% if speaker.position AND speaker.company %}, {% endif %}{{ speaker.company }}</li>
-        {% endfor %}
-        </ul>
-      {% endif %}
-      <p>{{ el.info }}</p>
-      {% if el.stage %}
-      <div class="schedule_open white b ttu">
-        <p>{{ el.stage }}</p>
-        <p>Stage <i class="fas fa-caret-down"></i></p>
-      </div>
-      {% endif %}
-    </div>
-  {% endfor %}
+    {% endfor %}
+  </div>
 </section>

@@ -318,5 +318,5 @@
 }(jQuery));
 
 $( document ).ready(function() {
-    $('.schedule').agenda();
+    $('.schedule_anchor').agenda();
 });

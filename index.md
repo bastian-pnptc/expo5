@@ -29,6 +29,12 @@ corporates:
 
 
     We are not a single corporation trying to innovate ourself but rather a heterogenous family who took the chance and started to learn from each other and from projects all around the globe.
+schedule:
+  title: Schedule
+  intro: >
+    In case you are curious to find out when everything takes place.
+    This will very likely get updated in the upcoming days – so be sure to take a glimpse on it once in a while.
+
 flashback:
   intro: >
     This year is actually the 3rd of our existens. That said we already hold amazing EXPO Days in recent years. Curious how that looked like and kind of — we changed the concept for this years EXPO Day quite a lot so stay tuned — see what to expect:
