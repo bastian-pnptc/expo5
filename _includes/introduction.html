@@ -1,10 +1,21 @@
 <section class="introduction sans-serif">
   <div class="container intro_container">
+    <div class="features">
+      {% for el in page.introduction.features %}
+        <div class="br feature white">
+          <p class="feature__number b">{{ el.number }}</p>
+          <p class="feature__title">{{ el.title }}</p>
+        </div>
+      {% endfor %}
+        <a class="br feature schedule_link ttu white b" href="#schedule">
+          Take a look at the schedule
+        </a>
+    </div>
     <div class="intro">
       {{ page.introduction.content | markdownify }}
+      {% if page.introduction.signature %}
+      {% include svg/signature_startup_autobahn.html %}
+      {% endif %}
     </div>
-    {% if page.introduction.signature %}
-    {% include svg/signature_startup_autobahn.html %}
-    {% endif %}
   </div>
 </section>

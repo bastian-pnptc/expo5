@@ -64,6 +64,15 @@ justify-content: $justify;
   flex-direction: row-reverse;
 }
 
+@mixin direction_column_reverse {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: column-reverse;
+  -ms-flex-direction: column-reverse;
+  -moz-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+}
+
 // mixin for media-querys
 @mixin media-query($device) {
   @media screen and (min-width: $device) {

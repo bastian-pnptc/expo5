@@ -23,6 +23,13 @@ introduction:
 
       See you at Wagenhallen!
   signature: true
+  features:
+    - title: invite only attendees — research, business, politics
+      number: 1000
+    - title: speakers — startups and industry masterminds
+      number: 57
+    - title: stages with panels, keynotes and live demos
+      number: 4
 corporates:
   content: >
     STARTUP AUTOBAHN is all about collaboration and open innovation. Our success is based on the tremendous participation of all partners working in conjunction to reach a single goal — to create a future we'd all would like to be part of.

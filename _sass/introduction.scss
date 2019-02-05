@@ -14,21 +14,26 @@ section.introduction {
     max-width: 600px;
     padding: 0 1em;
     text-align: left;
+    @include display_flex;
+    @include align-items(flex-start);
+    @include direction_column_reverse;
     @include media-query($small) {
-      text-align: center;
       margin: 0 auto;
       max-width: 750px;
       padding: 0 5em;
-    };
-    @include media-query($small) {
       max-width: unset;
+    };
+    @include media-query($medium) {
+      @include justify-content(center);
+      @include direction_row;
     };
   }
   .intro{
-    flex: 0 1 auto;
-    margin: 0 auto;
+    flex: 1 0ee auto;
     @include media-query($medium){
       max-width: 750px;
+      margin-left: 50px;
+      padding-top: 10px;
     };
     p {
       font-size: 1rem;
@@ -44,5 +49,57 @@ section.introduction {
   svg {
     max-width: 300px;
     fill: $dark;
+    display: block;
+    margin-top: 5px;
+  }
+  .features {
+    max-width: 600px;
+    @include display_flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-top: 50px;
+    flex: 0 1;
+    @include media-query($medium) {
+      margin: 0;
+    }
+    @include media-query($large) {
+      flex: 1 0 600px;
+    }
+  }
+  .feature {
+    flex: 1 0 auto;
+    background: $dark;
+    width: 100%;
+    margin: 5px;
+    //height: 200px;
+    @include display_flex;
+    @include justify-content(center);
+    @include align-items(center);
+    @include direction_column;
+    padding: 20px;
+    @include media-query($small){
+      min-width: 250px;
+      max-width: 300px;
+      width: calc(50% - 10px);
+    };
+    @include media-query($medium)  {
+      width: calc(50% - 10px);
+    }
+    @include media-query($large){
+      padding: 50px;
+    };
+    p, a {
+      padding: 0;
+      line-height: 1.3em;
+      text-align: center;
+    }
+    .feature__number {
+      font-size: 4rem;
+    }
+  }
+  a.schedule_link {
+    background: $red;
+    color: $dark;
+    text-align: center;
   }
 }
