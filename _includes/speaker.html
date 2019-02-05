@@ -49,7 +49,7 @@
       </div>
       {% endif %}{% endfor %}
 
-      <div class="speaker__item">
+      <!-- <div class="speaker__item">
         <div class="speaker__image">
             <div class="keynote_logo_questionmark">
               {% include svg/question.html %}
@@ -58,7 +58,62 @@
         <div class="speaker__info speaker__info_more ttu b dark">
           <p>...more will be announced soon.</p>
         </div>
+      </div> -->
+
+    </div>
+
+  </div>
+
+
+  <div class="speaker__inner container">
+
+    <div class="speaker__section ttu red">
+      <div class="header">
+        <h3 class="no_margin">our speakers</h3>
+        <p class="sub_title dark b">Panelists</p>
       </div>
+    </div>
+
+    <div class="speaker__frame">
+
+      {% for panelist in site.data.panelists %}{% if panelist.include %}
+      <div class="speaker__item">
+        <div class="speaker__image">
+          {% if panelist.image %}
+            <div class="image_bg lazyload" data-bg='{{ panelist.image[0].thumbnails.full.url }}'></div>
+          {% endif %}
+          {% unless panelist.image %}
+            <div class="keynote_logo_fallback">
+            </div>
+          {% endunless %}
+        </div>
+        <div class="speaker__info">
+          <h4>{{ panelist.surename }} {{ panelist.name }}</h4>
+          {% if panelist.profession %}
+          <p class="position ttu">{{ panelist.profession }}</p>
+          {% endif %}
+          {% if panelist.company %}
+          <p class="company ttu">{{ panelist.company }}</p>
+          {% endif %}
+          <div class="desc">
+            {% if panelist.bio %}
+            {{ panelist.bio | markdownify }}
+            {% endif %}
+            {% if panelist.topic %}
+            {% if panelist.bio && panelist.description %}<br><br>{% endif %}
+            <span class="red b ttu">{{ panelist.topic}}</span><br>
+            {% endif %}
+            {% if panelist.description %}
+            {{ panelist.description | markdownify }}
+            {% endif %}
+          </div>
+          <div class="read_more ttu">
+            <p><i class="fas fa-caret-right"></i> Read More</p>
+          </div>
+        </div>
+      </div>
+      {% endif %}{% endfor %}
+
 
     </div>
 
@@ -80,6 +135,10 @@
       <div class="speaker__item">
         <div class="speaker__image">
           {% if startup.speaker_image %}
+            <div class="startup_logo_frame">
+              <div class="startup_logo_icon lazyload" data-bg="{{ startup.logo[0].url }}">
+              </div>
+            </div>
             <div class="image_bg lazyload" data-bg='{{startup.speaker_image[0].thumbnails.full.url }}'></div>
           {% endif %}
           {% unless startup.speaker_image %}

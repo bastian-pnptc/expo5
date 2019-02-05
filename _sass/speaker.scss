@@ -58,6 +58,7 @@
     width: 100%;
     margin-right: 10px;
     flex: 0 0 100px;
+    position: relative;
     background-color: #f1f1f1;
     @include display_flex;
     @include justify-content(center);
@@ -80,6 +81,46 @@
         opacity: 1;
         transition: opacity .6s;
       }
+    }
+    .startup_logo_frame {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+      height: 40px;
+      background: $red;
+      border: none;
+      @include display_flex;
+      @include align-items(center);
+      @include justify-content(center);
+      @include media-query($medium){
+        bottom: 10px;
+        left: 10px;
+        width: 60px;
+        background: white;
+        border-radius: .3em;
+      };
+    }
+    .startup_logo_icon {
+      width: 50%;
+      height: 80%;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      &,
+      &.lazyload,
+      &.lazyloading {
+        opacity: 0;
+      }
+      &.lazyloaded {
+        opacity: 1;
+        transition: opacity .6s;
+      }
+      @include media-query($medium){
+        width: 80%;
+        height: 60%;
+      };
     }
     .startup_logo_fallback {
       width: 60%;
