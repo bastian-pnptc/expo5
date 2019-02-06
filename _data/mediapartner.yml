@@ -11,3 +11,6 @@ mediapartners:
   - name: t3n
     url: https://t3n.de/
     logo_svg: t3n.svg
+  - name: carIT
+    url: https://www.car-it.com/
+    logo_svg: carit_pri_rgb_blk.svg

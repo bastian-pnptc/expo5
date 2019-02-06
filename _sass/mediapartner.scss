@@ -11,7 +11,7 @@ section.mediapartner {
   };
   .mediaparter_logos {
     @include display_flex;
-    @include justify-content(space-between);
+    @include justify-content(center);
     margin-top: 50px;
     flex-wrap: wrap;
     .mediapartner_item {
@@ -53,11 +53,13 @@ section.mediapartner {
   }
   @include media-query($small){
     width: calc(100% / 2 - 5px);
+    margin: 5px;
   };
   @include media-query($medium){
     width: calc(100% / 3 - 1em);
   };
   @include media-query($large){
-    width: calc(100% / 4 - 15px);
+    width: calc(100% / 4 - 20px);
+    margin: 10px;
   };
 }
