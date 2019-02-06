@@ -4,7 +4,7 @@ agenda:
     end: '14:00'
     stage: "main"
     info: >
-      Networking: Get to know the people attending todays event
+      Networking: Get to know the people attending todays event<br>Innvitation Walk
   - title: Grand Opening
     start: '14:00'
     end: '14:30'
@@ -50,9 +50,9 @@ agenda:
       - name: Anela Böse
         position: Director Connected Car Electric/Electronics
         company: Porsche
-      - name: Vlado Koljibabic
-        company: Daimler
-        position: Head of CASE IT
+      - name: Nils Wollny
+        company: CEO
+        position: Holoride
     topic: 'Topic: Does digital disruption eat the car industry for breakfast?'
   - title: Future Talk
     start: '15:30'
@@ -62,8 +62,8 @@ agenda:
     tags:
       - talk
     speakers:
-      - name: Simon Hadaddin
-        position: CEO & Co-Founder
+      - name: Dennis Lehmeier
+        position: VP Global Sales
         company: Franka Emika
       - name: Uwe Braun
         position: Director HR
@@ -93,6 +93,9 @@ agenda:
       - name: Charles Vaillant
         position: CTO
         company: Mann & Hummel
+      - namme: Jürgen Winterholler
+        position: CDO
+        company: Rolls Royce Power Systems
     info: >
       Hosted by Patrice Bouédibéla
 
@@ -110,6 +113,9 @@ agenda:
       - name: Amir Adamov
         position: CEO
         company: WhiteRaven
+      - name: Eldar Soreq
+        position: Sales Director Europe
+        company: Eyesight
     topic: 'Topic: Does digital disruption eat the car industry for breakfast?'
     info: >
       Hosted by Stephan Dörner, Editor-in-Chief t3n
@@ -131,6 +137,9 @@ agenda:
       - name: Martin Naumann
         position: CEO
         company: drag&bot
+      - name: Michael Hiebinger
+        position: Account Executive
+        company: Franka Emika
   - title: AI/Machine Learning
     start: '16:00'
     end: '16:15'
@@ -211,6 +220,12 @@ agenda:
       - name: Aditya Prem
         position: CTO
         company: Ainak
+      - name: Nick de la Forge
+        position: Busindess Development
+        company: Xain
+      - name: Martijn Joris
+        position: CEO
+        company: Twikit
   - title: Maintenance & Quality Pitching
     start: '16:50'
     end: '17:20'
@@ -267,6 +282,9 @@ agenda:
       - name: Christian Flechl
         position: Managing Director
         company: Volterio
+      - name: Brent Schwarz
+        position: Head of Business Development
+        company: Luminar
     info: >
       Hosted by Peter Kenneth Campbell, Financial Times
   - title: Meet ARENA2036
@@ -289,9 +307,6 @@ agenda:
       - name: Sven Zuschlag
         position: CEO
         corporate: SmapOne
-      - name: Benjamin Pieck
-        position: Co-Founder
-        corporate: Matchingbox
       - name: Steffen Iwan
         positon: Head of Business Development
         corporate: Contiamo
@@ -349,7 +364,7 @@ agenda:
         partner: Managing Director
         company: NIO
     info: >
-      The future is in smart, electric and autonomous vehicles, and NIO aims to lead the next generation car company. NIO is a Chinese automobile manufacturer headquartered in Shanghai, specializing in designing and developing safe electric autonomous vehicles. 
+      The future is in smart, electric and autonomous vehicles, and NIO aims to lead the next generation car company. NIO is a Chinese automobile manufacturer headquartered in Shanghai, specializing in designing and developing safe electric autonomous vehicles.
   - title: 'Founders Rearview'
     start: '18:30'
     end: '18:40'

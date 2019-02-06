@@ -14,7 +14,7 @@ section.schedule {
 }
 
 .schedule_el {
-  width: 60%;
+  width: 80%;
   background: white;
   position: absolute;
   z-index: 1;
@@ -24,6 +24,10 @@ section.schedule {
   border: none;
   overflow: hidden;
   transform: translateX(-50%);
+  @include media-query( $medium ) {
+    width: 70%;
+    left: 60%;
+  }
   &[data-stage]:not([data-stage='main']) {
     transform: none;
   }
