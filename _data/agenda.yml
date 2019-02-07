@@ -54,6 +54,7 @@ agenda:
         company: CEO
         position: Holoride
     topic: 'Topic: Does digital disruption eat the car industry for breakfast?'
+    info: 'hosted by Patrice Bouédibéla'
   - title: Future Talk
     start: '15:30'
     end: '16:00'
@@ -62,7 +63,7 @@ agenda:
     tags:
       - talk
     speakers:
-      - name: Dennis Lehmeier
+      - name: Michael Hiebinger,
         position: VP Global Sales
         company: Franka Emika
       - name: Uwe Braun
@@ -98,7 +99,6 @@ agenda:
         company: Rolls Royce Power Systems
     info: >
       Hosted by Patrice Bouédibéla
-
   - title: Software Intelligence - made in Tel Aviv
     start: '16:00'
     end: '16:30'
@@ -113,10 +113,9 @@ agenda:
       - name: Amir Adamov
         position: CEO
         company: WhiteRaven
-      - name: Eldar Soreq
-        position: Sales Director Europe
+      - name: Avi Rosenfeld
+        position: EVP Global Sales
         company: Eyesight
-    topic: 'Topic: Does digital disruption eat the car industry for breakfast?'
     info: >
       Hosted by Stephan Dörner, Editor-in-Chief t3n
   - title: Robotic Pitching
@@ -190,7 +189,8 @@ agenda:
       - name: Andy Toth
         position: 'Investment Director, Germany'
         company: Plug and Play Germany
-  - title: Do you like to shop or do you want to share?
+  - title: How will the Driver Experience change?
+    topic: Do you like to shop or do you want to share?
     start: '16:30'
     end: '17:00'
     tags:
@@ -204,7 +204,6 @@ agenda:
       - name: Timothée Boitouzet
         position: CEO
         company: Woodoo
-    topic: 'Topic: Does digital disruption eat the car industry for breakfast?'
     info: >
       Hosted by Alexander Langer, Deputy Editor-in-Chief at Business Punk
   - title: VR/AR
@@ -313,6 +312,9 @@ agenda:
       - name: Karina Buschsieweke
         position: Managing Director
         corporate: Lana Labs
+      - name: Tim von Törne
+        position: Co-Founder & COO
+        corporate: Kopernikus Automotive
   - title: Future Talk
     topic: 'What is the role of mobility in 2050?'
     start: '17:30'
