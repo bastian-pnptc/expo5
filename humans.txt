@@ -41,3 +41,6 @@ using airtable as source for startups
 20181212 1802
 REDESIGN CORPORATE SECTION
 include corporates and merge with redesigned partner/corporate section
+
+20190207 1951
+SCHEDULE BACKEND NOW SERVED THROUGH AIRTABLE

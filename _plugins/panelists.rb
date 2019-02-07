@@ -9,7 +9,7 @@ require 'active_support/all'
 # Pass in the app key and table name
 
 @table = @client.table(ENV['TABLE_KEY'], "panelists")
-@records = @table.records(:sort => ["name", :asc])
+@records = @table.records(:sort => ["speaker_name", :asc])
 
 # Change the filename here below but make sure it's in the _data folder.
 File.open("_data/panelists.json", "w") do |f|

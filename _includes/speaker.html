@@ -14,28 +14,28 @@
       {% for keynote in site.data.keynotes %}{% if keynote.include %}
       <div class="speaker__item">
         <div class="speaker__image">
-          {% if keynote.image %}
-            <div class="image_bg lazyload" data-bg='{{ keynote.image[0].thumbnails.full.url }}'></div>
+          {% if keynote.speaker_image %}
+            <div class="image_bg lazyload" data-bg='{{ keynote.speaker_image[0].thumbnails.full.url }}'></div>
           {% endif %}
-          {% unless keynote.image %}
+          {% unless keynote.speaker_image %}
             <div class="keynote_logo_fallback">
             </div>
           {% endunless %}
         </div>
         <div class="speaker__info">
-          <h4>{{ keynote.surename }} {{ keynote.name }}</h4>
-          {% if keynote.profession %}
-          <p class="position ttu">{{ keynote.profession }}</p>
+          <h4>{{ keynote.speaker_surename }} {{ keynote.speaker_name }}</h4>
+          {% if keynote.speaker_profession %}
+          <p class="position ttu">{{ keynote.speaker_profession }}</p>
           {% endif %}
           {% if keynote.company %}
           <p class="company ttu">{{ keynote.company }}</p>
           {% endif %}
           <div class="desc">
-            {% if keynote.bio %}
-            {{ keynote.bio | markdownify }}
+            {% if keynote.speaker_bio %}
+            {{ keynote.speaker_bio | markdownify }}
             {% endif %}
             {% if keynote.topic %}
-            {% if keynote.bio && keynote.description %}<br><br>{% endif %}
+            {% if keynote.speaker_bio && keynote.description %}<br><br>{% endif %}
             <span class="red b ttu">{{ keynote.topic}}</span><br>
             {% endif %}
             {% if keynote.description %}
@@ -79,28 +79,28 @@
       {% for panelist in site.data.panelists %}{% if panelist.include %}
       <div class="speaker__item">
         <div class="speaker__image">
-          {% if panelist.image %}
-            <div class="image_bg lazyload" data-bg='{{ panelist.image[0].thumbnails.full.url }}'></div>
+          {% if panelist.speaker_image %}
+            <div class="image_bg lazyload" data-bg='{{ panelist.speaker_image[0].thumbnails.full.url }}'></div>
           {% endif %}
-          {% unless panelist.image %}
+          {% unless panelist.speaker_image %}
             <div class="keynote_logo_fallback">
             </div>
           {% endunless %}
         </div>
         <div class="speaker__info">
-          <h4>{{ panelist.surename }} {{ panelist.name }}</h4>
-          {% if panelist.profession %}
-          <p class="position ttu">{{ panelist.profession }}</p>
+          <h4>{{ panelist.speaker_surename }} {{ panelist.speaker_name }}</h4>
+          {% if panelist.speaker_profession %}
+          <p class="position ttu">{{ panelist.speaker_profession }}</p>
           {% endif %}
           {% if panelist.company %}
           <p class="company ttu">{{ panelist.company }}</p>
           {% endif %}
           <div class="desc">
-            {% if panelist.bio %}
-            {{ panelist.bio | markdownify }}
+            {% if panelist.speaker_bio %}
+            {{ panelist.speaker_bio | markdownify }}
             {% endif %}
             {% if panelist.topic %}
-            {% if panelist.bio && panelist.description %}<br><br>{% endif %}
+            {% if panelist.speaker_bio && panelist.description %}<br><br>{% endif %}
             <span class="red b ttu">{{ panelist.topic}}</span><br>
             {% endif %}
             {% if panelist.description %}
@@ -147,12 +147,12 @@
           {% endunless %}
         </div>
         <div class="speaker__info">
-          <h4>{% if startup.speaker_name %}{{ startup.speaker_first_name }} {{ startup.speaker_name }}{% elsif startup.display_name %}{{ startup.display_name }}{% else %}{{ startup.name }}{% endif %}</h4>
+          <h4>{% if startup.speaker_name %}{{ startup.speaker_surename }} {{ startup.speaker_name }}{% elsif startup.display_company %}{{ startup.display_company }}{% else %}{{ startup.company }}{% endif %}</h4>
           {% if startup.speaker_name AND startup.speaker_position %}
-          <p class="position ttu">{{ startup.speaker_position }}</p>
+          <p class="position ttu">{{ startup.speaker_profession }}</p>
           {% endif %}
           {% if startup.speaker_name %}
-          <p class="company ttu">{% if startup.display_name %}{{ startup.display_name }}{% else %}{{ startup.name }}{% endif %}</p>
+          <p class="company ttu">{% if startup.display_company %}{{ startup.display_company }}{% else %}{{ startup.company }}{% endif %}</p>
           {% endif %}
           <p class="desc">
             {% if startup.description %}
