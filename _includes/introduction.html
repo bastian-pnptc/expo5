@@ -16,6 +16,16 @@
       {% if page.introduction.signature %}
       {% include svg/signature_startup_autobahn.html %}
       {% endif %}
+      {% for el in site.data.schedule %}
+        {% for el in el.panelists %}
+          {% assign guys = site.data.panelists | where:"id", el %}
+          {% for el in guys %}
+            {{ el.name }}
+          {% endfor %}
+        {% endfor %}
+
+
+      {% endfor %}
     </div>
   </div>
 </section>
