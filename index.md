@@ -26,7 +26,7 @@ introduction:
   features:
     - title: invite only attendees — research, business, politics
       number: 1000
-    - title: speakers — startups and industry masterminds
+    - title: international speakers — startups and industry masterminds
       number: 57
     - title: stages with panels, keynotes and live demos
       number: 4

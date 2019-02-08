@@ -49,9 +49,28 @@
 
 
           {% for speaker in speakers  %}
-            <li><span class="ttu b">{{ speaker.speaker_surename }} {{ speaker.speaker_name }}</span><br>{{ speaker.speaker_profession }}{% if speaker.speaker_profession AND speaker.company %}, {% endif %}{{ speaker.company }}</li>
+            <li><span class="ttu b">{{ speaker.speaker_surename }} {{ speaker.speaker_name }}</span><br>{{ speaker.speaker_profession }}{% if speaker.speaker_profession and speaker.company %}, {% endif %}{{ speaker.company }}</li>
           {% endfor %}
           {% assign speakers =  %}
+          </ul>
+        {% endif %}
+        {% if el.host_keynotes or el.host_panelists %}
+          <p class="ttu b speaker_head">Host</p>
+          <ul>
+          {% for el in el.host_keynotes %}
+            {% assign host_keynote = site.data.keynotes | where:"id", el %}
+            {% assign hosts = hosts | concat: host_keynote %}
+          {% endfor %}
+
+          {% for el in el.host_panelists %}
+            {% assign host_panelist = site.data.panelists | where:"id", el %}
+            {% assign hosts = hosts | concat: host_panelist %}
+          {% endfor %}
+
+          {% for host in hosts  %}
+            <li><span class="ttu b">{{ host.speaker_surename }} {{ host.speaker_name }}</span><br>{{ host.speaker_profession }}{% if host.speaker_profession and host.company %}, {% endif %}{{ host.company }}</li>
+          {% endfor %}
+          {% assign hosts =  %}
           </ul>
         {% endif %}
         {{ el.info | markdownify }}
