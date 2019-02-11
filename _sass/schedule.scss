@@ -112,6 +112,13 @@ section.schedule {
       background: $yellow;
     }
   }
+  &[data-stage="INNOVATION WALK"]  {
+    .schedule__stage_marker,
+    .schedule__tags p,
+    &.deactivated:before {
+      background: #0078ff;
+    }
+  }
   .schedule_el__header {
     margin: .5em 0 1em;
   }

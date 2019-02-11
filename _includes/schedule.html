@@ -14,7 +14,7 @@
       <div class="schedule_el br sans-serif schedule_el_{{ forloop.index }}" data-start="{{ el.start | date: "%H:%M" }}" data-end="{{ el.end | date: "%H:%M" }}" {% if el.stage %}data-stage="{{ el.stage }}"{% else %}data-stage="main"{% endif %}>
         <div class="schedule__stage_marker">
           {% if el.stage %}
-          <p class="b ttu white">{{ el.stage }} Stage</p>
+          <p class="b ttu white">{{ el.stage }} {% unless el.stage == 'INNOVATION WALK' %}Stage{% endunless %}</p>
           {% endif %}
         </div>
         <time class="b">{{ el.start | date: "%H:%M" }} — {{ el.end | date: "%H:%M" }}</time>
