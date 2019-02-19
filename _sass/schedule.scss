@@ -95,28 +95,29 @@ section.schedule {
     .schedule__stage_marker,
     .schedule__tags p,
     &.deactivated:before {
-      background: $green;
+      background: $expo_yellow;
     }
   }
   &[data-stage="FUTURE OF PRODUCTION"]  {
     .schedule__stage_marker,
     .schedule__tags p,
     &.deactivated:before {
-      background: $red;
+      background: $expo_blue;
     }
   }
   &[data-stage="FUTURE OF ENTERPRISE"]  {
     .schedule__stage_marker,
     .schedule__tags p,
     &.deactivated:before {
-      background: $yellow;
+      background: $expo_red;
     }
   }
   &[data-stage="INNOVATION WALK"]  {
     .schedule__stage_marker,
     .schedule__tags p,
     &.deactivated:before {
-      background: #0078ff;
+      //background: #0078ff;
+      background: $green;
     }
   }
   .schedule_el__header {
